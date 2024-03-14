@@ -1,7 +1,7 @@
 // MissionCard.jsx
 import React from 'react';
 
-import Image from 'next/Image'
+import Image from 'next/image'
 import { motion } from 'framer-motion';
 
 const MissionCard = ({ onClick, imageSrc, title, delay = 0 }) => (

@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/Image";
+import Image from "next/image";
 
 const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
     const [hovered, setHovered] = React.useState(false);
