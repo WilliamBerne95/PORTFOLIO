@@ -9,6 +9,7 @@ const projectsData = [
     {
         id: 1,
         title: "Portfolio",
+        lien: 'portfolio',
         description: "Il s'agit de mon portefolio codé en NEXT.JS et en REACT",
         image: "/images/projects/1.png",
         tag: ["Tous", "Web", "Ecole"],
@@ -18,6 +19,7 @@ const projectsData = [
     {
         id: 2,
         title: "EasyLine",
+        lien: 'easyline',
         description: "Projet développé sous la directive de Mr. Frebourg en Java",
         image: "/images/projects/2.png",
         tag: ["Tous", "Application", "Ecole"],
@@ -27,6 +29,7 @@ const projectsData = [
     {
         id: 3,
         title: "Rugby",
+        lien: 'rugby',
         description: "Projet développé sous la directive de Mr. Guichard en Django",
         image: "/images/projects/3.png",
         tag: ["Tous", "Web", "Application", "Ecole"],
@@ -36,6 +39,7 @@ const projectsData = [
     {
         id: 4,
         title: "Text adventure",
+        lien: 'text-adventure',
         description: "Projet développé sous la directive de Mr. Hubert en Django",
         image: "/images/projects/4.png",
         tag: ["Tous", "Application", "Ecole"],
@@ -45,6 +49,7 @@ const projectsData = [
     {
         id: 5,
         title: "Gaming Explorer",
+        lien: 'gaming-explorer',
         description: "Projet développé sous la directive de Mr. Hubert et Mr. Guichard avec Matheous.KG et Fatih.CK en NEXT.JS et en REACT",
         image: "/images/projects/11.png",
         tag: ["Tous", "Web", "Ecole"],
@@ -54,6 +59,7 @@ const projectsData = [
     {
         id: 6,
         title: "Gestion de tickets via GLPI",
+        lien: 'gestion-de-tickets',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
         tag: ["Tous", "Web", "Entreprise"],
@@ -125,7 +131,7 @@ const ProjectsSection = () => {
                         transition={{duration: 0.3, delay: index * 0.4}}
                     >
                         <Link
-                            href={`/projets/${project.title.toLowerCase()}`}
+                            href={`/projets/${project.lien}`}
                             passHref
                             legacyBehavior
                         >
