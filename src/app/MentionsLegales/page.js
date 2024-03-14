@@ -10,7 +10,7 @@ const Mentionslegales = () => {
 
             <h2 className="text-2xl font-bold mt-6 mb-4">Éditeur du Site</h2>
             <p>
-                <strong>Nom de l'Éditeur :</strong> William BERNE<br />
+                <strong>{`Nom de l'Éditeur :`}</strong> William BERNE<br />
                 <strong>Email :</strong> william.berne@edu.esiee-it.fr<br />
                 <strong>Téléphone :</strong> +33 7 86 13 97 16
             </p>

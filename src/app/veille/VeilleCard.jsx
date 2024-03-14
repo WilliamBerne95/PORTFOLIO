@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/Image";
 
 const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
     const [hovered, setHovered] = React.useState(false);
@@ -21,9 +22,11 @@ const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
-                    <img
+                    <Image
                         src={image}
                         alt={title}
+                        width={1000}
+                        height={1000}
                         className="image"
                     />
                     {hovered && (
@@ -52,7 +55,7 @@ const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
                         rel="noopener noreferrer"
                         className="text-primary-500 hover:text-primary-400"
                     >
-                        Lire l'article
+                        {`Lire l'article`}
                     </a>
                 </div>
             </div>

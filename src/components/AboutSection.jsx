@@ -26,7 +26,7 @@ const TAB_DATA = [
             <ul className="list-disc pl-2">
                 <li>2018 - BAC STI2D option ITEC à Lycée Jules Verne, Cergy-le-Haut (95800)</li>
                 <li>2020 - BTS Aquaculture au Lycée agricole de Coulogne, Coulogne (62137)</li>
-                <li>2022 - BTS SIO option SLAM à l'ESIEE-IT, Pontoise (95300)</li>
+                <li>{`2022 - BTS SIO option SLAM à l'ESIEE-IT, Pontoise (95300)`}</li>
             </ul>
         ),
     },
@@ -51,17 +51,17 @@ function AboutSection() {
     return (
         <section className="text-white" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-                <Image src="/images/bluecomputer.png" width={500} height={500} />
+                <Image src="/images/bluecomputer.png" alt={`image`} width={500} height={500} />
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h2 className="text-4xl font-bold text-white mb-4">A propos de Moi 👨🏽‍💻</h2>
                     <p className="text-base lg:text-lg">
                         <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}>William Berne ({age} ans)</span>
                         <br />
                         <h3>
-                            Depuis toujours passionné par l'informatique, j'ai constamment cherché à en apprendre davantage.
-                            Mon intérêt prolongé dans ce domaine m'a conduit à développer un faible pour le hardware.
-                            À l'âge de 14 ans, j'ai assemblé mon premier ordinateur de manière autonome,
-                            et dès mes 11 ans, j'ai collaboré avec deux amis pour coder en Python un jeu de course 3D via Blender.
+                            {`Depuis toujours passionné par l'informatique, j'ai constamment cherché à en apprendre davantage.
+                                Mon intérêt prolongé dans ce domaine m'a conduit à développer un faible pour le hardware.
+                                À l'âge de 14 ans, j'ai assemblé mon premier ordinateur de manière autonome,
+                                et dès mes 11 ans, j'ai collaboré avec deux amis pour coder en Python un jeu de course 3D via Blender.`}
                         </h3>
                     </p>
                     <div className="flex flex-row justify-start mt-8">

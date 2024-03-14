@@ -8,16 +8,16 @@ const Rugby = () => {
             <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Description</h2>
                 <p>
-                    Il s'agit d'une application mobile développée en Django pour générer les matchs de Rugby avec un système de billet
+                    {`Il s'agit d'une application mobile développée en Django pour générer les matchs de Rugby avec un système de billet`}
                 </p>
             </section>
 
             <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Objectifs</h2>
                 <p>
-                    Créer une interface distincte pour le scanner de billets et les données relatives au rugby. Mettre en place
-                    un ORM Django pour effectuer les requêtes d'API et exploiter les informations des matchs stockées dans la
-                    base de données afin de générer les billets
+                    {`Créer une interface distincte pour le scanner de billets et les données relatives au rugby. Mettre en place
+                        un ORM Django pour effectuer les requêtes d'API et exploiter les informations des matchs stockées dans la
+                        base de données afin de générer les billets`}
                 </p>
             </section>
 

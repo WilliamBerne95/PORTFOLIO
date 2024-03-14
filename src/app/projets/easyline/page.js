@@ -9,10 +9,10 @@ const EasyLine = () => {
             <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Description</h2>
                 <p>
-                    Gaming Explorer est un projet basé sur Next.JS qui propose un site
-                    permettant aux utilisateurs de rechercher des jeux vidéo via l'API de Rawg.io.
-                    L'application offre des fonctionnalités avancées telles qu'un compte utilisateur
-                    permettant d'ajouter des jeux aux favoris et bien plus encore.
+                    {`Gaming Explorer est un projet basé sur Next.JS qui propose un site
+                        permettant aux utilisateurs de rechercher des jeux vidéo via l'API de Rawg.io.
+                        L'application offre des fonctionnalités avancées telles qu'un compte utilisateur
+                        permettant d'ajouter des jeux aux favoris et bien plus encore.`}
                 </p>
             </section>
 

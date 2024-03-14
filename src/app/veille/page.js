@@ -47,7 +47,7 @@ const articlesData = [
     },
     {
         id: 5,
-        title: "AMD championne de la longévité : vieilles cartes mères d'il y a 7 ans toujours mises à jour",
+        title: `AMD championne de la longévité : vieilles cartes mères d'il y a 7 ans toujours mises à jour`,
         description: "",
         image: "/images/veille/9.jpg",
         tag: ["All", "Hardware"],
@@ -171,13 +171,13 @@ const VeilleHardware = () => {
                 exit="exit"
                 transition={{duration: 1}}
             >
-                Le matériel informatique, aussi appelé "hardware", désigne l'ensemble
-                des composants physiques d'un système informatique. Cela englobe les
-                éléments tels que les processeurs, les cartes graphiques, la mémoire,
-                les disques durs, les alimentations, etc. Le matériel constitue la
-                base physique sur laquelle les logiciels s'exécutent. Ma veille
-                consiste à surveiller les évolutions, les nouveautés et les
-                informations importantes liées à ces composants.
+                {`Le matériel informatique, aussi appelé "hardware", désigne l'ensemble
+                    des composants physiques d'un système informatique. Cela englobe les
+                    éléments tels que les processeurs, les cartes graphiques, la mémoire,
+                    les disques durs, les alimentations, etc. Le matériel constitue la
+                    base physique sur laquelle les logiciels s'exécutent. Ma veille
+                    consiste à surveiller les évolutions, les nouveautés et les
+                    informations importantes liées à ces composants.`}
             </motion.p>
 
             <div className="text-white flex flex-row justify-center items-center gap-2 py-6">

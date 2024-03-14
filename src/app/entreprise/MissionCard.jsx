@@ -1,5 +1,7 @@
 // MissionCard.jsx
 import React from 'react';
+
+import Image from 'next/Image'
 import { motion } from 'framer-motion';
 
 const MissionCard = ({ onClick, imageSrc, title, delay = 0 }) => (
@@ -12,7 +14,7 @@ const MissionCard = ({ onClick, imageSrc, title, delay = 0 }) => (
         whileHover={{ scale: 1.05 }}
         style={{ boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
     >
-        <img src={imageSrc} alt={title} className="rounded-t-lg w-full h-48 object-cover" />
+        <Image src={imageSrc} alt={title} width={1000} height={1000} className="rounded-t-lg w-full h-48 object-cover" />
         <div className="p-4">
             <h3 className="text-center mt-2 text-lg font-semibold">{title}</h3>
         </div>
