@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
@@ -60,6 +59,26 @@ const projectsData = [
         id: 6,
         title: "Gestion de tickets via GLPI",
         lien: 'gestion-de-tickets',
+        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        image: "/images/projects/5.png",
+        tag: ["Tous", "Web", "Entreprise"],
+        gitUrl: "/",
+        previewUrl: "/",
+    },
+    {
+        id: 7,
+        title: "Mise à disposition d'une baie de brassage",
+        lien: 'brassage',
+        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        image: "/images/projects/5.png",
+        tag: ["Tous", "Web", "Entreprise"],
+        gitUrl: "/",
+        previewUrl: "/",
+    },
+    {
+        id: 8,
+        title: "Configuration VPN",
+        lien: 'vpn',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
         tag: ["Tous", "Web", "Entreprise"],

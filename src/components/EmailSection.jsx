@@ -17,7 +17,6 @@ const EmailSection = () => {
           Contacte-moi !
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           Je suis constamment à la recherche de nouvelles opportunités,
           mes réseaux sont toujours ouverts.
           Que tu aies une question ou simplement envie de dire bonjour, je ferai de mon mieux pour te répondre !
