@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../nextjs-portfolio-main/nextjs-portfolio-main/public/github-icon.svg";
-import LinkedinIcon from "../../../nextjs-portfolio-main/nextjs-portfolio-main/public/linkedin-icon.svg";
+import GithubIcon from "/github-icon.svg";
+import LinkedinIcon from "/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
