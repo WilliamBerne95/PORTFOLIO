@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, from 'react';
 import Link from 'next/link';
 
 const images = [
@@ -21,12 +21,6 @@ const images = [
 ];
 
 const vpn = () => {
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        // This will only be true when running in the browser
-        setIsClient(typeof window !== 'undefined');
-    }, []);
 
     return (
         <div className="container mx-auto py-12">
