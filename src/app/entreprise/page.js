@@ -11,8 +11,13 @@ const AboutSection = () => {
     const [tab, setTab] = useState("role");
     const [posteDescription, setPosteDescription] = useState("");
     const [isDescriptionVisible, setDescriptionVisible] = useState(false);
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState({ title: "", content: "" });
+    const [isModalOpen, setModalOpen] = useState({
+        dysfonctionnements: false,
+        demandes: false,
+        equipements: false,
+        incidents: false,
+        brassage: false,
+    });
 
     useEffect(() => {
         if (tab === "role") {
@@ -30,44 +35,15 @@ const AboutSection = () => {
         setTab(id);
         setPosteDescription("");
         setDescriptionVisible(false);
-        setModalOpen(false);
     };
 
-    const missionContents = {
-        dysfonctionnements: {
-            title: "Dysfonctionnements signalés",
-            content: "Cette tâche implique d'abord la réception des signalements de problèmes par les utilisateurs clés...",
-        },
-        demandes: {
-            title: "Gestion des demandes",
-            content: "Cette activité consiste à trier et prioriser les tickets reçus...",
-        },
-        equipements: {
-            title: "Mise à jour des équipements",
-            content: "Cette responsabilité englobe l'installation physique de nouveaux équipements...",
-        },
-        incidents: {
-            title: "Analyse des incidents",
-            content: "Faire une revue régulière des incidents résolus est essentiel pour identifier les tendances...",
-        },
-        brassage: {
-            title: "Gestion des baies de brassage",
-            content: "Cette tâche cruciale implique la gestion et l'organisation des baies de brassage...",
-        },
+    const openModal = (modal) => setModalOpen({ ...isModalOpen, [modal]: true });
+    const closeModal = () => setModalOpen({ dysfonctionnements: false, demandes: false, equipements: false, incidents: false, brassage: false });
+    const clickableStyle = {
+        cursor: 'pointer',
+        textDecoration: 'underline',
+        color : '#5e89ec'
     };
-
-    const openModal = (missionKey) => {
-        setModalContent({
-            title: missionKey.charAt(0).toUpperCase() + missionKey.slice(1).replace(/([A-Z])/g, ' $1').trim(),
-            content: missionContents[missionKey]
-        });
-        setModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setModalOpen(false);
-    };
-
 
     return (
         <section className="text-white" id="about">
@@ -101,13 +77,16 @@ const AboutSection = () => {
                         de l'IT
                         et notamment du hardware.
                     </p>
-                    <div className="flex justify-center gap-4 my-4">
-                        <TabButton selectTab={() => handleTabChange("role")} active={tab === "role"}>Mon
-                            poste</TabButton>
-                        <TabButton selectTab={() => handleTabChange("missions")} active={tab === "missions"}>Mes
-                            missions</TabButton>
-                        <TabButton selectTab={() => handleTabChange("equipe")}
-                                   active={tab === "equipe"}>L'équipe</TabButton>
+                    <div className="flex flex-row justify-start mt-8">
+                        <TabButton selectTab={() => handleTabChange("role")} active={tab === "role"}>
+                            Mon poste
+                        </TabButton>
+                        <TabButton selectTab={() => handleTabChange("missions")} active={tab === "missions"}>
+                            Mes missions
+                        </TabButton>
+                        <TabButton selectTab={() => handleTabChange("equipe")} active={tab === "equipe"}>
+                            L'équipe
+                        </TabButton>
                     </div>
                     <div className="mt-8">
                         {tab === "role" && (
@@ -162,17 +141,16 @@ const AboutSection = () => {
                     </div>
                 </div>
             </div>
-
-                <Modal isOpen={isModalOpen} onClose={closeModal} title={modalContent.dysfonctionnements}>
-                    <p>Cette tâche implique d'abord la réception des signalements de problèmes par les utilisateurs clés,
-                        via GLPI, email, ou même par téléphone pour les cas urgents. Une fois le dysfonctionnement rapporté,
-                        il est crucial d'identifier rapidement la nature du problème, d'évaluer son impact et de déterminer
-                        les étapes nécessaires pour le résoudre.
-                        Cette phase peut nécessiter une communication étroite avec l'utilisateur pour comprendre le contexte
-                        du problème et, si nécessaire,
-                        une intervention directe sur le matériel ou logiciel concerné.</p>
-                </Modal>
-                <Modal isOpen={isModalOpen} onClose={closeModal} title={modalContent.demandes}>
+            <Modal isOpen={isModalOpen.dysfonctionnements} onClose={closeModal} title="Dysfonctionnements signalés">
+                <p>Cette tâche implique d'abord la réception des signalements de problèmes par les utilisateurs clés,
+                    via GLPI, email, ou même par téléphone pour les cas urgents. Une fois le dysfonctionnement rapporté,
+                    il est crucial d'identifier rapidement la nature du problème, d'évaluer son impact et de déterminer
+                    les étapes nécessaires pour le résoudre.
+                    Cette phase peut nécessiter une communication étroite avec l'utilisateur pour comprendre le contexte
+                    du problème et, si nécessaire,
+                    une intervention directe sur le matériel ou logiciel concerné.</p>
+            </Modal>
+            <Modal isOpen={isModalOpen.demandes} onClose={closeModal} title="Gestion des demandes">
                 <p>Cette activité consiste à trier et prioriser les tickets reçus en fonction de leur impact sur les
                     opérations de l'entreprise et de leur ancienneté.
                     Chaque ticket doit être suivi de manière rigoureuse jusqu'à sa résolution, garantissant que
@@ -180,14 +158,14 @@ const AboutSection = () => {
                     L'objectif est de résoudre les problèmes de manière efficace tout en assurant la satisfaction des
                     utilisateurs</p>
             </Modal>
-    <Modal isOpen={isModalOpen} onClose={closeModal} title={modalContent.equipements}>
+            <Modal isOpen={isModalOpen.equipements} onClose={closeModal} title="Mise à jour des équipements">
                 <p>Cette responsabilité englobe l'installation physique de nouveaux équipements sur site ou leur
                     configuration à distance,
                     ainsi que la mise à jour logicielle nécessaire pour maintenir le système opérationnel et sécurisé.
                     Cela peut inclure l'intégration de nouvelles solutions dans l'environnement existant, en veillant à
                     leur compatibilité et à leur performance optimale.</p>
             </Modal>
-    <Modal isOpen={isModalOpen} onClose={closeModal} title={modalContent.incidents}>
+            <Modal isOpen={isModalOpen.incidents} onClose={closeModal} title="Analyse des incidents">
                 <p>Faire une revue régulière des incidents résolus est essentiel pour identifier les tendances, les
                     vulnérabilités récurrentes ou les failles de sécurité.
                     Cette analyse permet d'initier des actions d'amélioration continue, visant à réduire la fréquence
@@ -195,7 +173,7 @@ const AboutSection = () => {
                     Elle contribue à optimiser les processus de support technique et à augmenter la satisfaction des
                     utilisateurs finaux.</p>
             </Modal>
-    <Modal isOpen={isModalOpen} onClose={closeModal} title={modalContent.brassage}>
+            <Modal isOpen={isModalOpen.brassage} onClose={closeModal} title="Gestion des baies de brassage">
                 <p>Cette tâche cruciale implique la gestion et l'organisation des baies de brassage qui servent de point
                     central pour connecter
                     les équipements réseau au sein des différents bâtiments de la préfecture.
@@ -208,8 +186,7 @@ const AboutSection = () => {
                     expertise technique pointue en matière de réseau,
                     une planification minutieuse et une capacité à résoudre les problèmes rapidement pour minimiser les
                     interruptions de service.</p>
-        </Modal>
-    )
+            </Modal>
         </section>
     );
 };
