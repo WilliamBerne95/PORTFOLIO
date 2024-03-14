@@ -45,7 +45,7 @@ const Brassage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {images.map((image, index) => (
                         <div key={index} className="mb-4">
-                            <Image src={image.original} alt={image.description} className="w-full h-auto" />
+                            <Image src={image.original} alt={image.description} width={1000} height={1000} className="w-full h-auto" />
                             <p className="text-center mt-2">{image.description}</p>
                         </div>
                     ))}
