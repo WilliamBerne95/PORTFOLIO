@@ -1,5 +1,4 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 const images = [
@@ -26,34 +25,30 @@ const images = [
 ];
 
 const Brassage = () => {
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        // This will only be true when running in the browser
-        setIsClient(typeof window !== 'undefined');
-    }, []);
-
     return (
         <div className="container mx-auto py-12">
-            <h1 className="text-4xl font-bold mb-8">{`Montage d'une baie de brassage`}</h1>
+            <h1 className="text-4xl font-bold mb-8">Montage d'une baie de brassage</h1>
 
             <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Description</h2>
-                <p>
-                    {`Gaming Explorer est un projet basé sur Next.JS qui propose un site
-                        permettant aux utilisateurs de rechercher des jeux vidéo via l'API de Rawg.io.
-                        L'application offre des fonctionnalités avancées telles qu'un compte utilisateur
-                        permettant d'ajouter des jeux aux favoris et bien plus encore.`}
-                </p>
+                <p>Gaming Explorer est un projet basé sur Next.JS qui propose un site permettant aux utilisateurs de rechercher des jeux vidéo via l'API de Rawg.io. L'application offre des fonctionnalités avancées telles qu'un compte utilisateur permettant d'ajouter des jeux aux favoris et bien plus encore.</p>
             </section>
 
             <section className="mb-8">
                 <h2 className="text-2xl font-bold mb-4">Durée du projet</h2>
-                <p>Mai - Septemebre 2023</p>
+                <p>Mai - Septembre 2023</p>
             </section>
 
             <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">{`Galerie d'images`}</h2>
+                <h2 className="text-2xl font-bold mb-4">Galerie d'images</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {images.map((image, index) => (
+                        <div key={index} className="mb-4">
+                            <img src={image.original} alt={image.description} className="w-full h-auto" />
+                            <p className="text-center mt-2">{image.description}</p>
+                        </div>
+                    ))}
+                </div>
             </section>
 
             <Link href="/projets" legacyBehavior>

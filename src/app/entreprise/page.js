@@ -54,7 +54,7 @@ const AboutSection = () => {
                 </h2>
                 <a href="https://www.val-doise.gouv.fr" target="_blank" rel="noopener noreferrer"
                    className="flex items-center">
-                    <Image src="/images/Entreprise/logo-prefecture-val-d-oise.jpg" alt={`Logo Préfecture du Val d'Oise`}
+                    <Image src="/images/Entreprise/logo-prefecture-val-d-oise.jpg" width={500} height={500} alt={`Logo Préfecture du Val d'Oise`}
                          style={{
                              borderRadius: '20%',
                              width: '100px',
