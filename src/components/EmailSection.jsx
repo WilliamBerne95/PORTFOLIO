@@ -1,6 +1,8 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
+
+import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const EmailSection = () => {
 
@@ -22,10 +24,10 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-2">
           <a href="https://github.com/WilliamBerne95" target="_blank" rel="noopener noreferrer">
-            <Image src={"/github-icon.svg"} width={50} height={50} alt="Github Icon" />
+            <FaGithub size={45} />
           </a>
           <a href="https://www.linkedin.com/in/william-berne/" target="_blank" rel="noopener noreferrer">
-            <Image src={"/linkedin-icon.svg"} width={50} height={50} alt="Linkedin Icon" />
+            <FaLinkedin size={45} />
           </a>
         </div>
       </div>
