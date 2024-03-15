@@ -1,42 +1,45 @@
-import React from "react";
+import React from 'react';
+import Image from 'next/image';
+import Link from "next/link";
 
-const TextAdventure = () => {
+const textAdventuresData = [
+    {
+        path: '/images/projects/textadventures/extraittextadv.PNG',
+        description: 'Extrait de Gameplay',
+        comment: 'Un extrait du gameplay de TextAdventures montrant l\'interface utilisateur dans le terminal.'
+    },
+    {
+        path: '/images/projects/textadventures/extraittextadvjeu.PNG',
+        description: 'Action de Gameplay',
+        comment: 'Une partie du jeu où le joueur choisit une action, démontrant la nature interactive de TextAdventures.'
+    },
+];
+
+const TextAdventures = () => {
     return (
-        <div className="container mx-auto py-12">
-            <h1 className="text-4xl font-bold mb-8">Présentation de EasyLine</h1>
+        <div className="container mx-auto py-12 px-4">
+            <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold mb-4">Text Adventures Game</h1>
+                <p className="text-xl">Explore the narrative world and make choices in TextAdventures.</p>
+            </div>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Description</h2>
-                <p>
-                    {`Gaming Explorer est un projet basé sur Next.JS qui propose un site
-                        permettant aux utilisateurs de rechercher des jeux vidéo via l'API de Rawg.io.
-                        L'application offre des fonctionnalités avancées telles qu'un compte utilisateur
-                        permettant d'ajouter des jeux aux favoris et bien plus encore.`}
-                </p>
-            </section>
-
-            <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Propriétaire du projet</h2>
-                <p>William</p>
-            </section>
-
-
-            <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Durée du projet</h2>
-                <p>Mai - Septemebre 2023</p>
-            </section>
-
-            <section className="mb-8">
-                <h2 className="text-2xl font-bold mb-4">Technologies utilisées</h2>
-                <ul className="list-disc pl-6">
-                    <li>Java</li>
-                    <li>Google Firebase</li>
-                    <li>Tailwind CSS</li>
-                    <li>Vercel</li>
-                </ul>
-            </section>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {textAdventuresData.map((item, index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+                        <Image src={item.path} alt={item.description} width={500} height={300} layout="responsive"/>
+                        <h3 className="text-lg font-bold my-2">{item.description}</h3>
+                        <p className="text-gray-700">{item.comment}</p>
+                    </div>
+                ))}
+            </div>
+            {/* You can add navigation or any other interactive elements below */}
+            <div className="text-center mt-12">
+                <Link legacyBehavior={true} href="/projets">
+                    <a className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Return to Projects</a>
+                </Link>
+            </div>
         </div>
     );
 };
 
-export default TextAdventure;
+export default TextAdventures;

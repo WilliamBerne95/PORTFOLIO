@@ -27,6 +27,18 @@ const images = [
         description: 'Configuration IP de Windows',
         comment: 'Configuration des paramètres IP sur un poste de travail Windows pour assurer une connectivité réseau adéquate.',
     },
+    {
+        original: '/images/projects/brassage/baiebrassage11.jpg',
+        thumbnail: '/images/projects/brassage/baiebrassage11.jpg',
+        description: 'Baie de brassage ',
+        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
+    },
+    {
+        original: '/images/projects/brassage/switchesbrassage12.jpg',
+        thumbnail: '/images/projects/brassage/switchesbrassage12.jpg',
+        description: 'Baie de brassage',
+        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
+    },
 ];
 
 const Brassage = () => {

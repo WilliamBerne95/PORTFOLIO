@@ -48,7 +48,47 @@ const masterisationData = [
         path: '/images/projects/profilage/3vpn.PNG',
         description: 'Connexion VPN établie',
         comment: 'Confirmation visuelle qu’une connexion VPN a été correctement établie.'
-    }
+    },
+    {
+        path: '/images/projects/profilage/sacocheaccessoires.jpg',
+        description: 'Sacoche et accessoires',
+        comment: 'Cette sacoche sera fourni avec le chargeur et la souris au demandeur de poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0001.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0002.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0003.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0004.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0005.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0006.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
+    {
+        path: '/images/projects/profilage/FinaliserunNOEMIDDI_page-0007.jpg',
+        description: 'Finaliser un Noemi',
+        comment: 'Demarches pour finaliser la masterisation d\'un poste Noemi.'
+    },
 ];
 
 const MasterisationNoemi = () => {
@@ -74,9 +114,10 @@ const MasterisationNoemi = () => {
                         aux projets</a>
                 </Link>
             </div>
-</div>
-)
-    ;
+
+        </div>
+    )
+        ;
 };
 
 export default MasterisationNoemi;

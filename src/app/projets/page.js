@@ -15,19 +15,11 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "EasyLine",
-        lien: 'easyline',
-        description: "Projet développé sous la directive de Mr. Frebourg en Java",
+        title: "Farming Game",
+        lien: 'farming',
+        description: "Projet développé sous la directive de Mr. Guichard en Java",
         image: "/images/projects/2.png",
         tag: ["Tous", "Application", "Ecole"],
-    },
-    {
-        id: 3,
-        title: "Rugby",
-        lien: 'rugby',
-        description: "Projet développé sous la directive de Mr. Guichard en Django",
-        image: "/images/projects/3.png",
-        tag: ["Tous", "Web", "Application", "Ecole"],
     },
     {
         id: 4,
