@@ -44,7 +44,7 @@ const GestionCopieurs = () => {
             </div>
 
             <div className="mb-8">
-                <h2 className="text-3xl font-bold underline decoration-wavy mb-6">Procédure d'Installation</h2>
+                <h2 className="text-3xl font-bold underline decoration-wavy mb-6">{`Procédure d'Installation`}</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {images.map((image, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden p-4">
