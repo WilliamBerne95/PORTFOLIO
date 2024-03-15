@@ -7,13 +7,11 @@ import Link from "next/link";
 const projectsData = [
     {
         id: 1,
-        title: "Portfolio",
-        lien: 'portfolio',
-        description: "Il s'agit de mon portefolio codé en NEXT.JS et en REACT",
+        title: "Motorized Wide Area",
+        lien: 'mwa',
+        description: "Projet développé sous la directive de Mme Abdelmoula avec Matheous.KG et Abdelali.I",
         image: "/images/projects/1.png",
         tag: ["Tous", "Web", "Ecole"],
-        gitUrl: "/",
-        previewUrl: "/",
     },
     {
         id: 2,
@@ -22,8 +20,6 @@ const projectsData = [
         description: "Projet développé sous la directive de Mr. Frebourg en Java",
         image: "/images/projects/2.png",
         tag: ["Tous", "Application", "Ecole"],
-        gitUrl: "/",
-        previewUrl: "/",
     },
     {
         id: 3,
@@ -32,8 +28,6 @@ const projectsData = [
         description: "Projet développé sous la directive de Mr. Guichard en Django",
         image: "/images/projects/3.png",
         tag: ["Tous", "Web", "Application", "Ecole"],
-        gitUrl: "/",
-        previewUrl: "/",
     },
     {
         id: 4,
@@ -42,8 +36,6 @@ const projectsData = [
         description: "Projet développé sous la directive de Mr. Hubert en Django",
         image: "/images/projects/4.png",
         tag: ["Tous", "Application", "Ecole"],
-        gitUrl: "/",
-        previewUrl: "/",
     },
     {
         id: 5,
@@ -52,8 +44,6 @@ const projectsData = [
         description: "Projet développé sous la directive de Mr. Hubert et Mr. Guichard avec Matheous.KG et Fatih.CK en NEXT.JS et en REACT",
         image: "/images/projects/11.png",
         tag: ["Tous", "Web", "Ecole"],
-        gitUrl: "/",
-        previewUrl: "/",
     },
     {
         id: 6,
@@ -61,9 +51,7 @@ const projectsData = [
         lien: 'gestion-de-tickets',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 7,
@@ -71,9 +59,7 @@ const projectsData = [
         lien: 'brassage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 9,
@@ -81,9 +67,7 @@ const projectsData = [
         lien: 'arrivants',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 10,
@@ -91,9 +75,7 @@ const projectsData = [
         lien: 'parc',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 11,
@@ -101,9 +83,7 @@ const projectsData = [
         lien: 'copieurs',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 12,
@@ -111,9 +91,7 @@ const projectsData = [
         lien: 'recyclage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 13,
@@ -121,9 +99,7 @@ const projectsData = [
         lien: 'maj',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
         id: 14,
@@ -131,9 +107,7 @@ const projectsData = [
         lien: 'profilages',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
         id: 15,
@@ -141,9 +115,7 @@ const projectsData = [
         lien: 'copieurs',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
         id: 16,
@@ -151,9 +123,7 @@ const projectsData = [
         lien: 'visio',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
         image: "/images/projects/5.png",
-        tag: ["Tous", "Web", "Entreprise"],
-        gitUrl: "/",
-        previewUrl: "/",
+        tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
 ];
 
