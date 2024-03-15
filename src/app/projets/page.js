@@ -85,6 +85,26 @@ const projectsData = [
         gitUrl: "/",
         previewUrl: "/",
     },
+    {
+        id: 9,
+        title: "Préparation de nouveaux arrivants",
+        lien: 'arrivants',
+        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        image: "/images/projects/5.png",
+        tag: ["Tous", "Web", "Entreprise"],
+        gitUrl: "/",
+        previewUrl: "/",
+    },
+    {
+        id: 10,
+        title: "Gestion du parc informatique",
+        lien: 'parc',
+        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        image: "/images/projects/5.png",
+        tag: ["Tous", "Web", "Entreprise"],
+        gitUrl: "/",
+        previewUrl: "/",
+    },
 ];
 
 
