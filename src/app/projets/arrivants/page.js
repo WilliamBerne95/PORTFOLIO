@@ -92,8 +92,8 @@ const NouveauxArrivants = () => {
             </div>
 
             <div className="text-center mt-12">
-                <Link href="/projets" legacyBehavior={true}>
-                    <a className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Retour aux procédures</a>
+                <Link legacyBehavior={true} href="/projets">
+                    <a className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Retour aux projets</a>
                 </Link>
             </div>
         </div>
