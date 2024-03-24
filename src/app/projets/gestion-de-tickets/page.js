@@ -4,6 +4,12 @@ import Image from 'next/image';
 
 const images = [
     {
+        original: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
+        thumbnail: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
+        description: 'Cycle de vie d\'un ticket sur GLPI',
+        comment: "Cycle de vie d\'un ticket sur GLPI."
+    },
+    {
         original: '/images/projects/ticketglpi/1GLPIinterfce.PNG',
         thumbnail: '/images/projects/ticketglpi/1GLPIinterfce.PNG',
         description: 'Interface GLPI',
@@ -37,12 +43,6 @@ const images = [
         original: '/images/projects/ticketglpi/6connexiondistance2.PNG',
         thumbnail: '/images/projects/ticketglpi/6connexiondistance2.PNG',
         description: 'Écran de Connexion',
-        comment: "Écran d'accueil d'une session Bureau à Distance."
-    },
-    {
-        original: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
-        thumbnail: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
-        description: 'Cycle de vie d\'un ticket sur GLPI',
         comment: "Écran d'accueil d'une session Bureau à Distance."
     },
 ];
