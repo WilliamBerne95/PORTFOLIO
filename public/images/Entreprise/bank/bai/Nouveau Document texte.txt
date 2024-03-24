@@ -1,5 +1,0 @@
-photo baies
-
-capture reseau ipconfig cmd 
-
-photo prise ethernet
