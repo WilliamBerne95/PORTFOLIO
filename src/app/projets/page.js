@@ -42,7 +42,7 @@ const projectsData = [
         title: "Gestion de tickets via GLPI",
         lien: 'gestion-de-tickets',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/A.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -50,7 +50,7 @@ const projectsData = [
         title: "Mise à disposition d'une baie de brassage",
         lien: 'brassage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/B.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -58,7 +58,7 @@ const projectsData = [
         title: "Préparation de nouveaux arrivants",
         lien: 'arrivants',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/C.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -66,7 +66,7 @@ const projectsData = [
         title: "Gestion du parc informatique",
         lien: 'parc',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/D.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -74,7 +74,7 @@ const projectsData = [
         title: "Installation des copieurs",
         lien: 'copieurs',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/E.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -82,7 +82,7 @@ const projectsData = [
         title: "Reconditionnement d'appareils defectueux",
         lien: 'recyclage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/F.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -90,7 +90,7 @@ const projectsData = [
         title: "Mises à jour et améliorations des équipements",
         lien: 'maj',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/G.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
@@ -98,7 +98,7 @@ const projectsData = [
         title: "Profilage des postes Noemi",
         lien: 'profilages',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/H.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
@@ -106,7 +106,7 @@ const projectsData = [
         title: "Installation des copieurs",
         lien: 'copieurs',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/J.png",
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
@@ -114,7 +114,7 @@ const projectsData = [
         title: "Préparation de visioconférences",
         lien: 'visio',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/5.png",
+        image: "/images/projects/I.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
 ];
