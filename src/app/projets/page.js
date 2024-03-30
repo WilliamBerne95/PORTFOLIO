@@ -18,7 +18,7 @@ const projectsData = [
         title: "Farming Game",
         lien: 'farming',
         description: "Projet développé sous la directive de Mr. Guichard en Java",
-        image: "/images/projects/2.png",
+        image: "/images/projects/farming.png",
         tag: ["Tous", "Application", "Ecole"],
     },
     {
@@ -26,7 +26,7 @@ const projectsData = [
         title: "Text adventure",
         lien: 'text-adventure',
         description: "Projet développé sous la directive de Mr. Hubert en Django",
-        image: "/images/projects/4.png",
+        image: "/images/projects/text.png",
         tag: ["Tous", "Application", "Ecole"],
     },
     {
@@ -89,7 +89,7 @@ const projectsData = [
         id: 13,
         title: "Mises à jour et améliorations des équipements",
         lien: 'maj',
-        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        description: "Maintenance et ajout d'équipements",
         image: "/images/projects/G.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
@@ -97,23 +97,15 @@ const projectsData = [
         id: 14,
         title: "Profilage des postes Noemi",
         lien: 'profilages',
-        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        description: "Mise en place d'ordinateurs portable pour les utilisateurs",
         image: "/images/projects/H.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
         id: 15,
-        title: "Installation des copieurs",
-        lien: 'copieurs',
-        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
-        image: "/images/projects/J.png",
-        tag: ["Tous", "Web", "Entreprise", "Année1"],
-    },
-    {
-        id: 16,
         title: "Préparation de visioconférences",
         lien: 'visio',
-        description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
+        description: "Préparation de visioconférences à la demande des membres de la préfecture",
         image: "/images/projects/I.png",
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
@@ -171,6 +163,18 @@ const ProjectsSection = () => {
                 >
                     Entreprise
                 </motion.button>
+            <motion.button
+                className={`${
+                    selectedTag === "Entreprise"
+                        ? "text-white border-primary-500"
+                        : "text-[#ADB7BE] border-slate-600 hover:border-white"
+                } rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+                onClick={() => handleTagChange("Année1")}
+                whileHover={{scale: 1.05}}
+                whileTap={{scale: 0.95}}
+            >
+                Année
+            </motion.button>
             </div>
             <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {filteredProjects.map((project, index) => (
