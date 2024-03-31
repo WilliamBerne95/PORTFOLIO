@@ -1,85 +1,139 @@
-import React from 'react';
-import Link from 'next/link';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import Typewriter from 'typewriter-effect';
 
-const images = [
+const ticketGlpiData = [
     {
-        original: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
-        thumbnail: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
+        path: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
         description: 'Cycle de vie d\'un ticket sur GLPI',
         comment: "Cycle de vie d\'un ticket sur GLPI."
     },
     {
-        original: '/images/projects/ticketglpi/1GLPIinterfce.PNG',
-        thumbnail: '/images/projects/ticketglpi/1GLPIinterfce.PNG',
+        path: '/images/projects/ticketglpi/1GLPIinterfce.PNG',
         description: 'Interface GLPI',
         comment: "Aperçu de l'interface principale de GLPI pour la gestion des tickets."
     },
     {
-        original: '/images/projects/ticketglpi/2GLPIticketnouvelarrivant1.PNG',
-        thumbnail: '/images/projects/ticketglpi/2GLPIticketnouvelarrivant1.PNG',
-        description: 'Ticket Nouvel Arrivant',
-        comment: "Détails du ticket pour un nouvel arrivant montrant les étapes initiales de traitement."
+        path: '/images/projects/ticketglpi/2GLPIticketnouvelarrivant1.PNG',
+        description: 'Ticket GLPI',
+        comment: "Détails d\'un ticket pour un nouvel arrivant montrant les étapes initiales de traitement."
     },
     {
-        original: '/images/projects/ticketglpi/3GLPIticketnouvelarrivant2.PNG',
-        thumbnail: '/images/projects/ticketglpi/3GLPIticketnouvelarrivant2.PNG',
-        description: 'Suivi de Ticket',
-        comment: "Historique des actions réalisées sur le ticket pour un nouvel arrivant."
+        path: '/images/projects/ticketglpi/3GLPIticketnouvelarrivant2.PNG',
+        description: 'Suivi d\'un Ticket',
+        comment: "Historique des actions réalisées sur un ticket pour un nouvel arrivant."
     },
     {
-        original: '/images/projects/ticketglpi/4relancemail.PNG',
-        thumbnail: '/images/projects/ticketglpi/4relancemail.PNG',
+        path: '/images/projects/ticketglpi/4relancemail.PNG',
         description: 'Relance par Email',
         comment: "Exemple d'un email de relance envoyé pour un ticket en attente de réponse."
     },
     {
-        original: '/images/projects/ticketglpi/5connexiondistance1.PNG',
-        thumbnail: '/images/projects/ticketglpi/5connexiondistance1.PNG',
+        path: '/images/projects/ticketglpi/5connexiondistance1.PNG',
         description: 'Connexion Bureau à Distance',
         comment: "Configuration d'une connexion à distance pour la résolution de problèmes."
     },
     {
-        original: '/images/projects/ticketglpi/6connexiondistance2.PNG',
-        thumbnail: '/images/projects/ticketglpi/6connexiondistance2.PNG',
+        path: '/images/projects/ticketglpi/6connexiondistance2.PNG',
         description: 'Écran de Connexion',
-        comment: "Écran d'accueil d'une session Bureau à Distance."
+        comment: "Fenetre de connexion d'une session Bureau à Distance."
     },
 ];
 
 const TicketManagement = () => {
+    const [zoomedItem, setZoomedItem] = useState(null);
+    const [animation, setAnimation] = useState('zoomIn'); // Gérer l'animation
+
+    const closeZoom = () => {
+        setAnimation('zoomOut'); // Commencer par l'animation de sortie
+        setTimeout(() => {
+            setZoomedItem(null); // Fermer l'overlay après l'animation
+        }, 300); // Assurez-vous que ce temps correspond à la durée de votre animation 'zoomOut'
+    };
+
+    useEffect(() => {
+        if (zoomedItem) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [zoomedItem]);
+
     return (
         <div className="container mx-auto py-12 px-4">
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-4">Gestion des Tickets GLPI</h1>
-                <p className="text-xl">Processus de suivi et résolution des tickets dans le système GLPI.</p>
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
+                    Gestion des Tickets GLPI
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
+                    Visualisation du processus de suivi et résolution des tickets dans GLPI.
+                </p>
             </div>
 
-            <div className="mb-8">
-                <h2 className="text-3xl font-bold underline decoration-wavy mb-6">Description</h2>
-                <p>{`Vue d'ensemble du système de gestion des tickets utilisé pour le support informatique.`}</p>
+            <div className="bg-gray-900 text-secondary-300 font-mono text-base sm:text-lg md:text-xl overflow-y-scroll p-6 my-6"
+                 style={{height: '45vh'}}>
+                <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter
+                            .changeDelay(10)
+                            .typeString('<span class="text-primary-500 text-3xl">Taches effectuées par :</span><br>BERNE William et l\'ensemble de l\'équipe SIDSIC<br><br>')
+                            .typeString('<span class="text-primary-500 text-3xl">Description :</span><br>')
+                            .typeString('J\'ai utilisé GLPI pour gérer efficacement la résolution des tickets, permettant ainsi de suivre, attribuer et résoudre les demandes et incidents de manière organisée. En plus de cela, j\'ai effectué la prise en main à distance et envoyé des relances par mail pour assurer un suivi complet et une résolution rapide des problèmes signalés.<br><br>')
+                            .typeString('<span class="text-primary-500 text-3xl">Logiciels/ plateformes utilisés :</span><br>')
+                            .typeString('• GLPI<br><br>')
+                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>07/11/2023 au 29/03/2024')
+                            .start();
+                    }}
+                />
             </div>
 
-            <div className="mb-8">
-                <h2 className="text-3xl font-bold underline decoration-wavy mb-6">{`Processus de Gestion des Tickets`}</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {images.map((image, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <Image src={image.original} alt={image.description} width={500} height={300} layout="responsive" />
-                            <div className="p-6">
-                                <p className="text-lg font-bold mb-2">{image.description}</p>
-                                <p className="text-gray-700 text-sm">{image.comment}</p>
-                            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {ticketGlpiData.map((item, index) => (
+                    <div key={index}
+                         className="relative cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
+                         onClick={() => setZoomedItem(item)}>
+                        <Image
+                            src={item.path}
+                            alt={item.description}
+                            width={500}
+                            height={300}
+                            layout="responsive"
+                            className="object-cover object-center w-full h-full"
+                        />
+                        <div className="absolute bottom-0 left-0 w-full p-4 z-10">
+                            <h3 className="text-lg font-bold text-white"
+                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
+
+            {zoomedItem && (
+                <div className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4 ${animation}`}
+                     onClick={closeZoom}>
+                    <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
+                         onClick={(e) => e.stopPropagation()}
+                         style={{animation: 'zoomIn 0.3s forwards'}}>
+                        <Image
+                            src={zoomedItem.path}
+                            alt={zoomedItem.description}
+                            width={800}
+                            height={450}
+                            layout="responsive"
+                            onClick={closeZoom}
+                        />
+                        <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
+                        <p className="text-gray-700">{zoomedItem.comment}</p>
+                    </div>
+                </div>
+            )}
 
             <div className="text-center mt-12">
                 <Link legacyBehavior={true} href="/projets">
-                    <a className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Retour aux projets</a>
+                    <a className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Retour aux projets</a>
                 </Link>
-
             </div>
         </div>
     );

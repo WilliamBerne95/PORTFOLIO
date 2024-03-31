@@ -82,18 +82,19 @@ Pour les icônes, nous avons opté pour l'utilisation de React-icons, une biblio
     },
     {
         path: '/images/projects/gamingexplorer/gamedetail.png',
-        description: 'Page de Détail du Jeu',
+        description: 'Page de Détail d\'un Jeu',
         comment: 'Page détaillée d’un jeu spécifique, fournissant des informations complètes et des interactions utilisateur.'
     },
     {
         path: '/images/projects/gamingexplorer/gamedetail-mobile.png',
-        description: 'Page de Détail du Jeu sur Mobile',
-        comment: 'Page détaillée d’un jeu optimisée pour mobile sur la plateforme Gaming Explorer.'
+        description: 'Page de Détail d\'un Jeu sur Mobile',
+        comment: 'Page détaillée d’un jeu responsive pour mobile sur Gaming Explorer.'
     },
     {
         path: '/images/projects/gamingexplorer/firebase.png',
         description: 'Découverte de Firebase',
-        comment: 'Interface de la console Firebase montrant la structure des données hébergées dans le cloud.'
+        comment: '\n' +
+            'N\'ayant pas eu d\'expérience préalable avec Firebase, ce projet m\'a démontré la puissance et la rapidité de mise en place de cet outil. Pour des projets similaires à l\'avenir, je choisirais directement cette option technique, considérée comme très pertinente.'
     },
     {
         path1: '/images/projects/gamingexplorer/schema-api2.png',
@@ -128,15 +129,15 @@ const GamingExplorerManagement = () => {
     return (
         <div className="container mx-auto py-12 px-4">
             <div className="text-center mb-12">
-                <h1 className="text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
+                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
                     Gaming Explorer
                 </h1>
-                <p className="text-xl lg:text-2xl text-secondary-300">
+                <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
                     Visualisation du projet Gaming Explorer.
                 </p>
             </div>
 
-            <div className="bg-gray-900 text-secondary-300 font-mono text-lg lg:text-xl overflow-y-scroll p-6 my-6"
+            <div className="bg-gray-900 text-secondary-300 font-mono text-base sm:text-lg md:text-xl overflow-y-scroll p-6 my-6"
                  style={{height: '45vh'}}>
                 <Typewriter
                     onInit={(typewriter) => {
@@ -185,7 +186,8 @@ const GamingExplorerManagement = () => {
                 <div className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4 ${animation}`}
                      onClick={closeZoom}>
                     <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
-                         onClick={(e) => e.stopPropagation()}>
+                         onClick={(e) => e.stopPropagation()}
+                         style={{animation: 'zoomIn 0.3s forwards'}}>
                         {/* If there are two images, display them on top of each other */}
                         {zoomedItem.path1 && (
                             <Image
@@ -194,6 +196,7 @@ const GamingExplorerManagement = () => {
                                 width={800}
                                 height={450}
                                 layout="responsive"
+                                onClick={closeZoom}
                             />
                         )}
                         {zoomedItem.path2 && (
@@ -203,6 +206,7 @@ const GamingExplorerManagement = () => {
                                 width={800}
                                 height={450}
                                 layout="responsive"
+                                onClick={closeZoom}
                             />
                         )}
                         {/* If there is only one image, display it */}
@@ -213,6 +217,7 @@ const GamingExplorerManagement = () => {
                                 width={800}
                                 height={450}
                                 layout="responsive"
+                                onClick={closeZoom}
                             />
                         )}
                         <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
