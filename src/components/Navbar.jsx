@@ -12,7 +12,7 @@ const navLinks = [
     path: "/entreprise",
   },
   {
-    title: "Réalisation",
+    title: "Réalisations",
     path: "/projets",
   },
   {

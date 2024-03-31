@@ -4,7 +4,7 @@ import AchievementsSection from "@/components/AchievementsSection";
 import AboutSection from "@/components/AboutSection";
 
 export const metadata = {
-    title: "William.B's Portfolio",
+    title: "Portfolio de William Berne",
     description: "Mon portfolio",
 }
 export default function Home() {
