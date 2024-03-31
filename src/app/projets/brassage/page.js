@@ -16,6 +16,16 @@ const images = [
         comment: 'Marquage et étiquetage des câbles pour une identification facile et une maintenance efficace.',
     },
     {
+        path: '/images/projects/brassage/baiebrassage11.jpg',
+        description: 'Baie de brassage ',
+        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
+    },
+    {
+        path: '/images/projects/brassage/switchesbrassage12.jpg',
+        description: 'Baie de brassage et switch réseau',
+        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
+    },
+    {
         path: '/images/projects/brassage/3eth.jpg',
         description: 'Prises Ethernet murales',
         comment: "Installation des prises Ethernet murales pour faciliter l\'accès au réseau dans différentes pièces.",
@@ -24,16 +34,6 @@ const images = [
         path: '/images/projects/brassage/4ipconfig.PNG',
         description: 'Configuration IP de Windows',
         comment: 'Configuration des paramètres IP sur un poste de travail Windows pour assurer une connectivité réseau adéquate.',
-    },
-    {
-        path: '/images/projects/brassage/baiebrassage11.jpg',
-        description: 'Baie de brassage ',
-        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
-    },
-    {
-        path: '/images/projects/brassage/switchesbrassage12.jpg',
-        description: 'Baie de brassage',
-        comment: 'Baie de brassage montée pour la salle COD (cellule de crise).',
     },
 ];
 
@@ -60,10 +60,10 @@ const BrassageManagement = () => {
         <div className="container mx-auto py-12 px-4">
             <div className="text-center mb-12">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-                    Montage d&apos;une baie de brassage
+                    Montage d'une baie de brassage
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
-                    Visualisation du projet de montage et d&apos;organisation d&apos;une baie de brassage.
+                    Visualisation du projet de montage et d'organisation d'une baie de brassage.
                 </p>
             </div>
 
@@ -73,15 +73,19 @@ const BrassageManagement = () => {
                     onInit={(typewriter) => {
                         typewriter
                             .changeDelay(10)
+                            .typeString('<span class="text-primary-500 text-3xl">Tâches effectuées par :</span><br>BERNE William<br><br>')
                             .typeString('<span class="text-primary-500 text-3xl">Description :</span><br>')
-                            .typeString('Description détaillée du projet de brassage ici.<br><br>')
+                            .typeString("Le montage d'une baie de brassage consiste à installer et configurer une armoire contenant l'équipement réseau (serveurs, switches, routeurs) d'une organisation. Cela inclut la planification de l'espace, l'installation physique des équipements, le câblage structuré, et la configuration pour assurer la connectivité et la communication au sein du réseau. La mission vise à créer un système organisé, sécurisé, et facile à maintenir pour gérer le flux de données efficacement.<br><br>")
+                            .typeString('<span class="text-primary-500 text-3xl">Logiciels/ plateformes utilisés :</span><br>')
+                            .typeString("• Invite de commande pour s'assurer du bon raccordement réseau<br><br>")
+                            .typeString('<span class="text-primary-500 text-3xl">Date :</span><br>05/05/2023')
                             .start();
                     }}
                 />
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {images.map((item, index) => ( // Utilisez ici le bon nom de la variable qui contient les données de votre image.
+                {images.map((item, index) => (
                     <div key={index}
                          className="relative cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
                          onClick={() => setZoomedItem(item)}>
@@ -92,7 +96,6 @@ const BrassageManagement = () => {
                             height={300}
                             layout="responsive"
                             className="object-cover object-center w-full h-full"
-                            onClick={closeZoom}
                         />
                         <div className="absolute bottom-0 left-0 w-full p-4 z-10">
                             <h3 className="text-lg font-bold text-white"

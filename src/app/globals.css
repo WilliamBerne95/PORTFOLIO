@@ -75,9 +75,6 @@ body {
     transform: scaleY(0); /* Le volet se rétracte vers le haut, disparaissant ainsi */
 }
 
-.cellule:hover h3 {
-    color: #9153d3;
-}
 body, html {
     cursor: url('/public/images/Cursors/Default.cur'), default;
 }
