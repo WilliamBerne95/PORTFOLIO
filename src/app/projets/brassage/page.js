@@ -8,7 +8,7 @@ const images = [
     {
         path: '/images/projects/brassage/1bai1.jpg',
         description: 'Panneau de brassage',
-        comment: "Installation du panneau de brassage dans la baie, assurant la centralisation des connexions réseau de l'ensemble du bâtiment.",
+        comment: "Installation du panneau de brassage dans la baie, assurant la centralisation des connexions réseau de l\'ensemble du bâtiment.",
     },
     {
         path: '/images/projects/brassage/2brs1.jpg',
@@ -18,7 +18,7 @@ const images = [
     {
         path: '/images/projects/brassage/3eth.jpg',
         description: 'Prises Ethernet murales',
-        comment: "Installation des prises Ethernet murales pour faciliter l'accès au réseau dans différentes pièces.",
+        comment: "Installation des prises Ethernet murales pour faciliter l\'accès au réseau dans différentes pièces.",
     },
     {
         path: '/images/projects/brassage/4ipconfig.PNG',
@@ -60,10 +60,10 @@ const BrassageManagement = () => {
         <div className="container mx-auto py-12 px-4">
             <div className="text-center mb-12">
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-                    Montage d'une baie de brassage
+                    Montage d\'une baie de brassage
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
-                    Visualisation du projet de montage et d'organisation d'une baie de brassage.
+                    Visualisation du projet de montage et d\'organisation d\'une baie de brassage.
                 </p>
             </div>
 
