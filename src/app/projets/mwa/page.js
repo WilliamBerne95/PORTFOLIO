@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -49,9 +49,27 @@ const motorizedWideAreaData = [
 const MotorizedWideArea = () => {
     const [zoomedItem, setZoomedItem] = useState(null);
 
+    // Fonction pour fermer l'overlay
+    const closeZoom = () => setZoomedItem(null);
+
     const toggleZoom = (item) => {
-        setZoomedItem(zoomedItem === item ? null : item);
+        if (zoomedItem && zoomedItem.path === item.path) {
+            setZoomedItem(null); // Si l'item est déjà ouvert, le fermer
+        } else {
+            setZoomedItem(item); // Sinon, ouvrir l'item cliqué
+        }
     };
+
+    // Utiliser useEffect pour gérer l'état de défilement de la page
+    useEffect(() => {
+        document.body.style.overflow = zoomedItem ? 'hidden' : 'auto';
+
+        // Nettoyer en rétablissant l'état de défilement original à la fermeture du composant
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [zoomedItem]);
+
 
     return (
         <div className="container mx-auto py-12 px-4">
@@ -62,7 +80,8 @@ const MotorizedWideArea = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {motorizedWideAreaData.map((item, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer" onClick={() => toggleZoom(item)}>
+                    <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer"
+                         onClick={() => setZoomedItem(item)}>
                         <Image src={item.path} alt={item.description} width={500} height={300} layout="responsive"/>
                         <h3 className="text-lg font-bold my-2">{item.description}</h3>
                         <p className="text-gray-700">{item.comment}</p>
@@ -71,14 +90,30 @@ const MotorizedWideArea = () => {
             </div>
 
             {zoomedItem && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4" onClick={() => setZoomedItem(null)}>
-                    <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto" onClick={e => e.stopPropagation()}>
-                        <Image src={zoomedItem.path} alt={zoomedItem.description} width={800} height={450} layout="responsive"/>
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4"
+                    onClick={closeZoom}
+                    style={{ animation: 'fadeIn 0.5s' }} // Appliquer l'animation de fond
+                >
+                    <div
+                        className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{ animation: 'zoomIn 0.3s forwards' }} // Appliquer l'animation de zoom
+                    >
+                        <Image
+                            src={zoomedItem.path}
+                            alt={zoomedItem.description}
+                            width={800}
+                            height={450}
+                            layout="responsive"
+                            onClick={closeZoom} // Cela va fermer l'overlay lors du clic sur l'image
+                        />
                         <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
                         <p className="text-gray-700">{zoomedItem.comment}</p>
                     </div>
                 </div>
             )}
+
 
             <div className="text-center mt-12">
                 <Link legacyBehavior={true} href="/projets">
