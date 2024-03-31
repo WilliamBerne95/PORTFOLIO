@@ -120,10 +120,10 @@ const MotorizedWideArea = () => {
                             layout="responsive"
                             className="object-cover object-center w-full h-full"
                         />
-                        <div className="absolute inset-0 w-full h-full" /> {/* Ajout du pseudo-élément */}
-                        <div className="absolute bottom-0 left-0 w-full p-4 z-10"> {/* Assurez-vous que le texte est au-dessus du dégradé */}
+                        <div className="absolute inset-0 w-full h-full" />
+                        <div className="absolute bottom-0 left-0 w-full p-4 z-10">
                             <h3 className="text-lg font-bold text-white"
-                                style={{textShadow: '0 0 3px black'}}>{item.comment}</h3>
+                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
                         </div>
                     </div>
                 ))}
@@ -135,12 +135,12 @@ const MotorizedWideArea = () => {
                     <div
                         className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4"
                         onClick={closeZoom}
-                        style={{animation: 'fadeIn 0.5s'}} // Appliquer l'animation de fond
+                        style={{animation: 'fadeIn 0.5s'}}
                     >
                         <div
                             className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
                             onClick={(e) => e.stopPropagation()}
-                            style={{animation: 'zoomIn 0.3s forwards'}} // Appliquer l'animation de zoom
+                            style={{animation: 'zoomIn 0.3s forwards'}}
                         >
                             <Image
                                 src={zoomedItem.path}
@@ -148,7 +148,7 @@ const MotorizedWideArea = () => {
                                 width={800}
                                 height={450}
                                 layout="responsive"
-                                onClick={closeZoom} // Cela va fermer l'overlay lors du clic sur l'image
+                                onClick={closeZoom}
                             />
                             <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
                             <p className="text-gray-700">{zoomedItem.comment}</p>

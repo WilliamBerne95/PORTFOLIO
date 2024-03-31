@@ -78,3 +78,55 @@ body {
 .cellule:hover h3 {
     color: #9153d3;
 }
+body, html {
+    cursor: url('/public/images/Cursors/Default.cur'), default;
+}
+
+/* Curseur pour les éléments cliquables */
+a, button {
+    cursor: url('/public/images/Cursors/Link.cur'), pointer;
+}
+
+/* Curseur pour la saisie de texte */
+input, textarea {
+    cursor: url('/public/images/Cursors/Ibeam.cur'), text;
+}
+
+/* Curseur de chargement */
+.loading {
+    cursor: url('/public/images/Cursors/Busy.ani'), wait;
+}
+
+/* Curseur de déplacement */
+.movable {
+    cursor: url('/public/images/Cursors/Move.cur'), move;
+}
+
+/* Curseur de redimensionnement horizontal */
+.resize-h {
+    cursor: url('/public/images/Cursors/Horizontal.cur'), ew-resize;
+}
+
+/* Curseur de redimensionnement vertical */
+.resize-v {
+    cursor: url('/public/images/Cursors/Vertical.cur'), ns-resize;
+}
+
+/* Curseur de redimensionnement diagonal */
+.resize-diag1 {
+    cursor: url('/public/images/Cursors/Diagonal_1.cur'), nesw-resize;
+}
+
+.resize-diag2 {
+    cursor: url('/public/images/Cursors/Diagonal_2.cur'), nwse-resize;
+}
+
+/* Curseur pour les opérations d'écriture */
+.handwriting {
+    cursor: url('/public/images/Cursors/Handwriting.cur'), url('/public/images/Cursors/Handwriting.cur'), text;
+}
+
+/* Curseur pour aider */
+.help {
+    cursor: url('/public/images/Cursors/Help.cur'), help;
+}
