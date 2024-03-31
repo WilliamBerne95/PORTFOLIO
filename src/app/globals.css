@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.img-zoomed {
+    transform: scale(2); /* Ajustez selon le niveau de zoom souhaité */
+    overflow: auto; /* Permet le défilement à l'intérieur de la div si l'image est plus grande */
+    max-height: 80vh; /* Limite la hauteur de la div pour activer le défilement, ajustez selon vos besoins */
+    transition: transform 0.3s ease-in-out; /* Transition douce */
+}
