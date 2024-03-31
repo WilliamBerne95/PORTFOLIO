@@ -7,24 +7,24 @@ import Typewriter from 'typewriter-effect';
 
 const motorizedWideAreaData = [
     {
+        path: '/images/projects/mwa/ticketing-jira.png',
+        description: 'Suivi des Tickets JIRA',
+        comment: 'Suivi de projet avec JIRA pour le logiciel Motorized Wide Area.'
+    },
+    {
         path: '/images/projects/mwa/cahier-des-charges.png',
         description: 'Cahier des Charges',
-        comment: 'Document définissant les exigences du projet Motorized Wide Area.'
+        comment: 'Cahier des charges du projet Motorized Wide Area.'
     },
     {
-        path: '/images/projects/mwa/cahier-technique.png',
-        description: 'Cahier Technique',
-        comment: 'Détails techniques et structure du projet Motorized Wide Area.'
-    },
-    {
-        path: '/images/projects/mwa/GANT.png',
-        description: 'Diagramme GANTT',
-        comment: 'Planification et suivi des tâches du projet Motorized Wide Area.'
+        path: '/images/projects/mwa/MotorizedWideArea.png',
+        description: 'Page d’Accueil',
+        comment: 'Aperçu de la page d’accueil de Motorized Wide Area.'
     },
     {
         path: '/images/projects/mwa/m2.png',
         description: 'Gestion de la Flotte',
-        comment: 'Interface de gestion des véhicules dans Motorized Wide Area.'
+        comment: 'Aperçu de l\'interface de gestion des véhicules dans Motorized Wide Area.'
     },
     {
         path: '/images/projects/mwa/m3.png',
@@ -32,15 +32,16 @@ const motorizedWideAreaData = [
         comment: 'Aperçu du tableau de bord administrateur pour Motorized Wide Area.'
     },
     {
-        path: '/images/projects/mwa/MotorizedWideArea.png',
-        description: 'Page d’Accueil',
-        comment: 'Page d’accueil du système Motorized Wide Area.'
+        path: '/images/projects/mwa/cahier-technique.png',
+        description: 'Cahier Technique',
+        comment: 'Cahier techniques et structure du projet Motorized Wide Area.'
     },
     {
-        path: '/images/projects/mwa/ticketing-jira.png',
-        description: 'Suivi des Tickets JIRA',
-        comment: 'Suivi de projet avec JIRA pour le logiciel Motorized Wide Area.'
+        path: '/images/projects/mwa/GANT.png',
+        description: 'Diagramme GANTT',
+        comment: 'Planification et suivi des tâches via un diagramme GANTT.'
     },
+
 ];
 
 
@@ -71,7 +72,7 @@ const MotorizedWideArea = () => {
             setCmdText((cmd) => cmd + fullCmdText[currentIndex]);
             currentIndex++;
             if (currentIndex === fullCmdText.length) clearInterval(intervalId);
-        }, 50); // La vitesse à laquelle le texte est écrit
+        }, 10); // La vitesse à laquelle le texte est écrit
 
         return () => clearInterval(intervalId);
     }, [zoomedItem]);
@@ -99,7 +100,8 @@ const MotorizedWideArea = () => {
                             .typeString('• Page d\'accueil pour créer un compte utilisateur et gérer une collection de personnages.<br><br>')
                             .typeString('<span class="text-primary-500 text-3xl">Spécifications techniques :</span><br>')
                             .typeString('• Front-end : HTML/CSS/JS<br>')
-                            .typeString('• Back-end : Django (Python)')
+                            .typeString('• Back-end : Django (Python)<br><br>')
+                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>07/11/2023 au 29/03/2024<br><br>')
                             .start();
                     }}
                 />
