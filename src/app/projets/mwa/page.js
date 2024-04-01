@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import {ReaCard} from "@/components/ReaCard";
@@ -48,19 +47,10 @@ const images = [
 
 const MotorizedWideArea = () => {
     const [zoomedItem, setZoomedItem] = useState(null);
-    const [animation, setAnimation] = useState('zoomIn'); // Gérer l'animation
-    const [cmdText, setCmdText] = useState('');
+    const [, setAnimation] = useState('zoomIn'); // Gérer l'animation
+    const [, setCmdText] = useState('');
     const fullCmdText = `Développé par:\nKOPS-GUEDES Matheus, BERNE William, IMZILEN Abdelali\n\nDescription\nLe projet vise à développer une application JavaFX de location de voitures, facilitant la gestion de la flotte, des réservations et des clients à travers 10 agences.\n\nFonctionnalités\n- Création d'une collection de favoris pour les personnages d'anime.\n- Recherche de personnages à partir de noms ou de critères spécifiques d'anime ou manga.\n- Page d'accueil pour créer un compte utilisateur et gérer une collection de personnages.\n\nSpécifications techniques\n- Front-end : HTML/CSS/JS\n- Back-end : Django (Python)`;
-    const closeZoom = () => {
-        setAnimation('zoomOut'); // Commencer par l'animation de sortie
-        setTimeout(() => {
-            setZoomedItem(null); // Fermer l'overlay après l'animation
-        }, 300); // Assurez-vous que ce temps correspond à la durée de votre animation 'zoomOut'
-    };
-    const getOpacityClass = (index) => {
-        const opacities = ['95', '90', '85', '80', '75', '70', '65', '60', '55', '50'];
-        return `opacity-${opacities[index % opacities.length]}`;
-    };
+
     // Gérer l'état de défilement de la page
     useEffect(() => {
         if (zoomedItem) {
