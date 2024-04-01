@@ -103,7 +103,7 @@ const MasterisationNoemi = () => {
                             .typeString("• Trellix Endpoint Security comme anti-virus<br>")
                             .typeString("• Configuration VPN<br>")
                             .typeString("• Cryhod pour le cryptage des disques<br><br>")
-                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>10/01/2024 au 12/01/2024')
+                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>01/10/2023 au 01/03/2024')
                             .start();
                     }}
                 />
