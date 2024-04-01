@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
+import {ReaCard} from "@/components/ReaCard";
 
-const farmingGameData = [
+const images = [
 
     {
         path: '/images/projects/farming/interfacejeucode.PNG',
@@ -46,7 +46,7 @@ const FarmingGameManagement = () => {
         <div className="container mx-auto py-12 px-4">
             <div className="text-center mb-12">
                 <h1 className="text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-                AquaFarmingGame
+                AquaFarming Game
                 </h1>
                 <p className="text-xl lg:text-2xl text-secondary-300">
                     Visualisation du projet de jeu de ferme.
@@ -75,52 +75,7 @@ const FarmingGameManagement = () => {
                 />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {farmingGameData.map((item, index) => (
-                    <div key={index}
-                         className="relative cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
-                         onClick={() => setZoomedItem(item)}>
-                        <Image
-                            src={item.path}
-                            alt={item.description}
-                            width={500}
-                            height={300}
-                            layout="responsive"
-                            className="object-cover object-center w-full h-full"
-                        />
-                        <div className="absolute inset-0 w-full h-full"/>
-                        <div className="absolute bottom-0 left-0 w-full p-4 z-10">
-                            <h3 className="text-lg font-bold text-white"
-                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {zoomedItem && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4"
-                    onClick={closeZoom}
-                    style={{animation: 'fadeIn 0.5s'}}
-                >
-                    <div
-                        className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
-                        onClick={(e) => e.stopPropagation()}
-                        style={{animation: 'zoomIn 0.3s forwards'}}
-                    >
-                        <Image
-                            src={zoomedItem.path}
-                            alt={zoomedItem.description}
-                            width={800}
-                            height={450}
-                            layout="responsive"
-                            onClick={closeZoom}
-                        />
-                        <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
-                        <p className="text-gray-700">{zoomedItem.comment}</p>
-                    </div>
-                </div>
-            )}
+            <ReaCard images={images} />
 
             <div className="text-center mt-12">
                 <Link legacyBehavior={true} href="/projets">

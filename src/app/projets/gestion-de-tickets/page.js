@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
+import {ReaCard} from "@/components/ReaCard";
 
-const ticketGlpiData = [
+const images = [
     {
         path: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
         description: 'Cycle de vie d\'un ticket sur GLPI',
@@ -89,46 +90,7 @@ const TicketManagement = () => {
                 />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {ticketGlpiData.map((item, index) => (
-                    <div key={index}
-                         className="relative cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
-                         onClick={() => setZoomedItem(item)}>
-                        <Image
-                            src={item.path}
-                            alt={item.description}
-                            width={500}
-                            height={300}
-                            layout="responsive"
-                            className="object-cover object-center w-full h-full"
-                        />
-                        <div className="absolute bottom-0 left-0 w-full p-4 z-10">
-                            <h3 className="text-lg font-bold text-white"
-                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {zoomedItem && (
-                <div className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4 ${animation}`}
-                     onClick={closeZoom}>
-                    <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
-                         onClick={(e) => e.stopPropagation()}
-                         style={{animation: 'zoomIn 0.3s forwards'}}>
-                        <Image
-                            src={zoomedItem.path}
-                            alt={zoomedItem.description}
-                            width={800}
-                            height={450}
-                            layout="responsive"
-                            onClick={closeZoom}
-                        />
-                        <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
-                        <p className="text-gray-700">{zoomedItem.comment}</p>
-                    </div>
-                </div>
-            )}
+            <ReaCard images={images} />
 
             <div className="text-center mt-12">
                 <Link legacyBehavior={true} href="/projets">
