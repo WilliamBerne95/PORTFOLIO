@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
+import {ReaCard} from "@/components/ReaCard";
 // Define your image data for Gaming Explorer project here
-const gamingExplorerData = [
+const images = [
     {
         path: '/images/projects/gamingexplorer/github.png',
         description: 'Dépôt GitHub',
@@ -160,71 +161,7 @@ const GamingExplorerManagement = () => {
                 />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {gamingExplorerData.map((item, index) => (
-                    <div key={index}
-                         className="relative cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
-                         onClick={() => setZoomedItem(item)}>
-                        <Image
-                            src={item.path2 || item.path}
-                            alt={item.description}
-                            width={500}
-                            height={300}
-                            layout="responsive"
-                            className="object-cover object-center w-full h-full"
-                        />
-                        <div className="absolute inset-0 w-full h-full"/>
-                        <div className="absolute bottom-0 left-0 w-full p-4 z-10">
-                            <h3 className="text-lg font-bold text-white"
-                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {zoomedItem && (
-                <div className={`fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 p-4 ${animation}`}
-                     onClick={closeZoom}>
-                    <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
-                         onClick={(e) => e.stopPropagation()}
-                         style={{animation: 'zoomIn 0.3s forwards'}}>
-                        {/* If there are two images, display them on top of each other */}
-                        {zoomedItem.path1 && (
-                            <Image
-                                src={zoomedItem.path1}
-                                alt="Firebase Backend Functioning"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path2 && (
-                            <Image
-                                src={zoomedItem.path2}
-                                alt="API Schema"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {/* If there is only one image, display it */}
-                        {!zoomedItem.path1 && zoomedItem.path && (
-                            <Image
-                                src={zoomedItem.path}
-                                alt={zoomedItem.description}
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        <h3 className="text-lg font-bold my-2">{zoomedItem.description}</h3>
-                        <p className="text-gray-700">{zoomedItem.comment}</p>
-                    </div>
-                </div>
-            )}
+            <ReaCard images={images} />
 
             <div className="text-center mt-12">
                 <Link legacyBehavior={true} href="/projets">
