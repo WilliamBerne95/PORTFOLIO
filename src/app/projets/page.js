@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const projectsData = [
     {
-        id: 1,
         title: "Motorized Wide Area",
         lien: 'mwa',
         description: "Projet développé sous la directive de Mme Abdelmoula avec Matheous.KG et Abdelali.I",
@@ -14,7 +13,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Ecole"],
     },
     {
-        id: 2,
         title: "Farming Game",
         lien: 'farming',
         description: "Projet développé sous la directive de Mr. Guichard en Java",
@@ -22,7 +20,6 @@ const projectsData = [
         tag: ["Tous", "Application", "Ecole"],
     },
     {
-        id: 4,
         title: "Text adventure",
         lien: 'text-adventure',
         description: "Projet développé sous la directive de Mr. Hubert en Django",
@@ -30,7 +27,6 @@ const projectsData = [
         tag: ["Tous", "Application", "Ecole"],
     },
     {
-        id: 5,
         title: "Gaming Explorer",
         lien: 'gaming-explorer',
         description: "Projet développé sous la directive de Mr. Hubert et Mr. Guichard avec Matheous.KG et Fatih.CK en NEXT.JS et en REACT",
@@ -38,7 +34,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Ecole"],
     },
     {
-        id: 6,
         title: "Gestion de tickets via GLPI",
         lien: 'gestion-de-tickets',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -46,7 +41,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 7,
         title: "Mise à disposition d'une baie de brassage",
         lien: 'brassage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -54,7 +48,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 9,
         title: "Préparation de nouveaux arrivants",
         lien: 'arrivants',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -62,7 +55,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 10,
         title: "Gestion du parc informatique",
         lien: 'parc',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -70,7 +62,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 11,
         title: "Installation des copieurs",
         lien: 'copieurs',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -78,7 +69,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 12,
         title: "Reconditionnement d'appareils defectueux",
         lien: 'recyclage',
         description: "Réalisation à partir de GLPI pour la prefecture du Val-D'Oise",
@@ -86,7 +76,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année1"],
     },
     {
-        id: 13,
         title: "Mises à jour et améliorations des équipements",
         lien: 'maj',
         description: "Maintenance et ajout d'équipements",
@@ -94,7 +83,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
-        id: 14,
         title: "Profilage des postes Noemi",
         lien: 'profilages',
         description: "Mise en place d'ordinateurs portable pour les utilisateurs",
@@ -102,7 +90,6 @@ const projectsData = [
         tag: ["Tous", "Web", "Entreprise", "Année2"],
     },
     {
-        id: 15,
         title: "Préparation de visioconférences",
         lien: 'visio',
         description: "Préparation de visioconférences à la demande des membres de la préfecture",
