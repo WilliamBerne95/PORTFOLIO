@@ -1,19 +1,6 @@
-import React, { useState } from "react";
+import React, from "react";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, id }) => {
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    const openPopup = () => {
-        setIsPopupOpen(true);
-    };
-
-    const closePopup = () => {
-        setIsPopupOpen(false);
-    };
-
-    const redirectToProjectDetails = () => {
-        window.location.href = `/projets/${id}`;
-    };
+const ProjectCard = ({ imgUrl, title, description,}) => {
 
     return (
         <div>

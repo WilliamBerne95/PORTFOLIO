@@ -40,11 +40,6 @@ const AboutSection = () => {
 
     const openModal = (modal) => setModalOpen({ ...isModalOpen, [modal]: true });
     const closeModal = () => setModalOpen({ dysfonctionnements: false, demandes: false, equipements: false, incidents: false, brassage: false });
-    const clickableStyle = {
-        cursor: 'pointer',
-        textDecoration: 'underline',
-        color : '#5e89ec'
-    };
 
     return (
         <section className="text-white" id="about">
