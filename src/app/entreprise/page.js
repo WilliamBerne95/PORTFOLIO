@@ -5,7 +5,7 @@ import Image from "next/image";
 import TabButton from "/src/components/TabButton";
 import Modal from "/src/components/Modal";
 import "animate.css/animate.min.css";
-import MissionCard from './MissionCard';
+import MissionCard from '../../components/MissionCard';
 import { motion } from 'framer-motion';
 
 const AboutSection = () => {
