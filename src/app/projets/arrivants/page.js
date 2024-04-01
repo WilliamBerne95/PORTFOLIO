@@ -7,54 +7,11 @@ import {ReaCard} from "@/components/ReaCard";
 
 const images = [
     {
-        path: '/images/projects/newarrivants/AD.PNG',
-        description: 'Utilisateurs Active Directory',
-        comment: 'Gestion des comptes utilisateurs et des permissions dans Active Directory.'
-    },
-    {
-        path: '/images/projects/newarrivants/arboicasso.jpg',
-        description: 'Arborescence des associations',
-        comment: 'Visualisation de la structure des associations dans le système.'
-    },
-    {
-        path: '/images/projects/newarrivants/BALF1.PNG',
-        description: 'Boîtes aux lettres fonctionnelles',
-        comment: 'Configuration des boîtes aux lettres fonctionnelles pour les utilisateurs.'
-    },
-    {
-        path: '/images/projects/newarrivants/BALF2.PNG',
-        description: 'Détails des boîtes aux lettres',
-        comment: 'Affichage des propriétés spécifiques des boîtes aux lettres fonctionnelles.'
-    },
-    {
-        path: '/images/projects/newarrivants/Creaboite mailOBM.PNG',
-        description: 'Création d’une boîte mail OBM',
-        comment: 'Procédure de création d’une nouvelle boîte mail dans OBM.'
-    },
-    {
-        path: '/images/projects/newarrivants/CreationprofilGLPI.PNG',
-        description: 'Création de profil dans GLPI',
-        comment: 'Étape de création d’un profil utilisateur dans l’outil GLPI.'
-    },
-    {
-        path: '/images/projects/newarrivants/droitsAD.png',
-        description: 'Droits d’accès Active Directory',
-        comment: 'Configuration des droits d’accès pour les répertoires de travail sur le serveur de fichiers.'
-    },
-    {
-        path: '/images/projects/newarrivants/fichemob1.jpg',
-        description: 'Fiche de mouvement du personnel - Page 1',
-        comment: 'Première page du formulaire de mouvement du personnel.'
-    },
-    {
-        path: '/images/projects/newarrivants/fichemob2.jpg',
-        description: 'Fiche de mouvement du personnel - Page 2',
-        comment: 'Seconde page du formulaire de mouvement du personnel, détaillant les moyens informatiques demandés.'
-    },
-    {
-        path: '/images/projects/newarrivants/fichemob3.jpg',
-        description: 'Fiche de mouvement du personnel - Page 3',
-        comment: 'Troisième page du formulaire de mouvement du personnel, incluant les droits d’accès.'
+        path1: '/images/projects/newarrivants/fichemob1.jpg',
+        path2: '/images/projects/newarrivants/fichemob2.jpg',
+        path3: '/images/projects/newarrivants/fichemob3.jpg',
+        description: 'Fiche mobilité du personnel',
+        comment: 'Formulaire de mouvement du personnel.'
     },
     {
         path: '/images/projects/newarrivants/GLPIticketnouvelarrivant3.PNG',
@@ -62,15 +19,51 @@ const images = [
         comment: 'Suivi des étapes de traitement d’un ticket pour un nouvel arrivant dans GLPI.'
     },
     {
-        path: '/images/projects/newarrivants/NOUVEL-ARRIVANTv4.jpg',
-        description: 'Procédure pour un nouvel arrivant',
-        comment: 'Document détaillant les étapes de configuration pour un nouvel arrivant.'
+        path: '/images/projects/newarrivants/AD.PNG',
+        description: 'Utilisateurs Active Directory',
+        comment: 'Gestion des comptes utilisateurs et des permissions dans Active Directory.'
     },
     {
         path: '/images/projects/newarrivants/profilAD.png',
         description: 'Propriétés de profil dans Active Directory',
         comment: 'Modification des propriétés d’un utilisateur dans Active Directory.'
-    }
+    },
+    {
+        path: '/images/projects/newarrivants/droitsAD.png',
+        description: 'Droits d’accès Active Directory',
+        comment: 'Configuration des droits d’accès pour les répertoires de travail sur le serveur de fichiers.'
+    },
+    {
+        path: '/images/projects/newarrivants/CreationprofilGLPI.PNG',
+        description: 'Création de profil dans GLPI',
+        comment: 'Étape de création d’un profil utilisateur dans l’outil GLPI.'
+    },
+    {
+        path: '/images/projects/newarrivants/Creaboite mailOBM.PNG',
+        description: 'Création d’une boîte mail OBM',
+        comment: 'Procédure de création d’une nouvelle boîte mail dans OBM.'
+    },
+    {
+        path: '/images/projects/newarrivants/arboicasso.jpg',
+        description: 'Arborescence des associations',
+        comment: 'Visualisation de la structure des associations dans le système via l\'arborescence ICASSO.'
+    },
+    {
+        path: '/images/projects/newarrivants/BALF2.PNG',
+        description: 'Ajout des boîtes aux lettres fonctionnelles',
+        comment: 'Affichage des propriétés spécifiques des boîtes aux lettres fonctionnelles.'
+    },
+    {
+        path: '/images/projects/newarrivants/BALF1.PNG',
+        description: 'Boîtes aux lettres fonctionnelles',
+        comment: 'Configuration des boîtes aux lettres fonctionnelles pour les utilisateurs.'
+    },
+    {
+        path: '/images/projects/newarrivants/NOUVEL-ARRIVANTv4.jpg',
+        description: 'Procédure pour un nouvel arrivant',
+        comment: 'Document détaillant les étapes de configuration pour un nouvel arrivant.'
+    },
+
 ];
 
 const NouveauxArrivants = () => {

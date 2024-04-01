@@ -76,6 +76,56 @@ export const ReaCard = (props) => {
                                 onClick={closeZoom}
                             />
                         )}
+                        {zoomedItem.path3 && (
+                            <Image
+                                src={zoomedItem.path3}
+                                alt="API"
+                                width={800}
+                                height={450}
+                                layout="responsive"
+                                onClick={closeZoom}
+                            />
+                        )}
+                        {zoomedItem.path4 && (
+                            <Image
+                                src={zoomedItem.path4}
+                                alt="API"
+                                width={800}
+                                height={450}
+                                layout="responsive"
+                                onClick={closeZoom}
+                            />
+                        )}
+                        {zoomedItem.path5 && (
+                            <Image
+                                src={zoomedItem.path5}
+                                alt="API"
+                                width={800}
+                                height={450}
+                                layout="responsive"
+                                onClick={closeZoom}
+                            />
+                        )}
+                        {zoomedItem.path6 && (
+                            <Image
+                                src={zoomedItem.path6}
+                                alt="API"
+                                width={800}
+                                height={450}
+                                layout="responsive"
+                                onClick={closeZoom}
+                            />
+                        )}
+                        {zoomedItem.path7 && (
+                            <Image
+                                src={zoomedItem.path7}
+                                alt="API"
+                                width={800}
+                                height={450}
+                                layout="responsive"
+                                onClick={closeZoom}
+                            />
+                        )}
                         {/* If there is only one image, display it */}
                         {!zoomedItem.path1 && zoomedItem.path && (
                             <Image
