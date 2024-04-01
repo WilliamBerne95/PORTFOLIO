@@ -6,6 +6,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --color-primary: #2079de;
+    --color-secondary: #8f64ec;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,9 +17,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+@media (max-width: 768px) {
     .menu {
-        display: none; /* Hide horizontal menu on mobile */
+        display: none;
     }
 }@media (min-width: 769px) {
     .menu {
@@ -38,10 +40,10 @@ body {
 }
 
 .img-zoomed {
-    transform: scale(2); /* Ajustez selon le niveau de zoom souhaité */
-    overflow: auto; /* Permet le défilement à l'intérieur de la div si l'image est plus grande */
-    max-height: 80vh; /* Limite la hauteur de la div pour activer le défilement, ajustez selon vos besoins */
-    transition: transform 0.3s ease-in-out; /* Transition douce */
+    transform: scale(2);
+    overflow: auto;
+    max-height: 80vh;
+    transition: transform 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -59,9 +61,9 @@ body {
     to { transform: scale(0.9); opacity: 0; }
 }
 .cellule {
-    position: relative; /* Assure-toi que la position soit relative pour le positionnement absolu du pseudo-élément */
-    overflow: hidden; /* Pour empêcher tout débordement du pseudo-élément */
-    transition: transform 0.5s ease; /* Transition pour l'effet de glissement */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
 }
 
 .cellule::after {
@@ -74,8 +76,8 @@ body {
     height: 100%;
     background: linear-gradient(
             to bottom,
-            rgba(109, 40, 217, 0.7) 20%, /* légèrement transparent en haut */
-            rgba(37, 99, 235, 0.7) 100%  /* légèrement transparent en bas */
+            rgba(109, 40, 217, 0.7) 20%,
+            rgba(37, 99, 235, 0.7) 100%
     );
     transform-origin: top;
     transform: scaleY(1);
@@ -83,7 +85,7 @@ body {
     z-index: 1;
 }
 .cellule:hover::after {
-    transform: scaleY(0); /* Le volet se rétracte vers le haut, disparaissant ainsi */
+    transform: scaleY(0);
 }
 
 body, html {
@@ -180,14 +182,139 @@ body, html {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .project-image {
-    width: 100%;         /* or a fixed width */
-    height: auto;        /* maintain aspect ratio */
-    object-fit: contain; /* if you're using img tag */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 .project-image-background {
-    background-size: cover; /* or contain, depending on the desired effect */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.bilan-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
+.bilan-title {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.year-review {
+    margin-bottom: 40px;
+}
+
+.year-title {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.year-description {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.gauges {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gauge-container {
+    text-align: center;
+}
+
+.gauge-label {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.gauge-percentage {
+    color: #4CAF50;
+    font-size: 1.5em;
+}
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+.fill-animation {
+    animation: fill 2s ease forwards;
+}
+.bilan-page {
+    background: #333;
+    color: #fff;
+    font-family: 'Consolas', 'Monaco', monospace;
+    padding: 20px;
+}
+
+.bilan-title {
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.yearly-bilan {
+    margin-bottom: 40px;
+}
+
+.skill-bar-container {
+    margin-bottom: 15px;
+}
+
+.skill-bar-title {
+    color: #aaa;
+}
+
+.skill-bar {
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    background: #208ec9;
+    height: 10px;
+    transition: width 1s ease-out;
+}
+
+.skill-bar-level {
+    color: #15b2ec;
+}
+
+
+.command-line-container {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    white-space: pre-wrap;
+    border: 1px solid #333;
+}
+
+
+.primary-fill {
+    background-color: var(--color-primary);
+}
+
+.secondary-fill {
+    background-color: var(--color-secondary);
+}
+
+.skill-bar-break {
+    height: 20px;
+}
+
+.blue-text {
+    color: #096aff; /* Or use any specific shade of blue you prefer, e.g., #0000FF */
+    font-size: 1.25em; /* Adjust the size as needed */
+}
