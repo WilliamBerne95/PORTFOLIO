@@ -102,66 +102,84 @@ const projectsData = [
 
 const ProjectsSection = () => {
     const [selectedTag, setSelectedTag] = useState("Tous");
+    const [schoolEntButtonText, setSchoolEntButtonText] = useState("École/Entreprise");
+    const [anneeButtonText, setAnneeButtonText] = useState("Année");
     const ref = useRef(null);
-    const isInView = useInView(ref, {once: true});
+    const isInView = useInView(ref, { once: true });
 
-    const handleTagChange = (newTag) => {
-        if (selectedTag === newTag) {
-            setSelectedTag("Tous");
-        } else {
-            setSelectedTag(newTag);
-        }
+    const cardVariants = {
+        initial: { opacity: 0, y: 10 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: -10 }
     };
 
     const filteredProjects = projectsData.filter((project) =>
         selectedTag === "Tous" ? true : project.tag.includes(selectedTag)
     );
 
-    const cardVariants = {
-        initial: {y: 50, opacity: 0},
-        animate: {y: 0, opacity: 1},
+
+    const handleSchoolEntChange = () => {
+        // Toggle between "École" and "Entreprise" and reset "Année"
+        if (selectedTag === "Ecole") {
+            setSelectedTag("Entreprise");
+            setSchoolEntButtonText("Entreprise");
+        } else if (selectedTag === "Entreprise") {
+            setSelectedTag("Tous");
+            setSchoolEntButtonText("École/Entreprise");
+        } else {
+            setSelectedTag("Ecole");
+            setSchoolEntButtonText("École");
+        }
+        setAnneeButtonText("Année"); // Reset the "Année" button text whenever toggling the school/enterprise filter
     };
 
+    const handleAnneeChange = () => {
+        // If currently selected is not "Année1" or "Année2", set it to "Année1"
+        if (selectedTag !== "Année1" && selectedTag !== "Année2") {
+            setSelectedTag("Année1");
+            setAnneeButtonText("Année 1");
+            setSchoolEntButtonText("École/Entreprise"); // Reset the "École/Entreprise" button text
+        } else if (selectedTag === "Année1") {
+            // If "Année1" is selected, switch to "Année2"
+            setSelectedTag("Année2");
+            setAnneeButtonText("Année 2");
+        } else {
+            // If "Année2" is selected, reset to show all
+            setSelectedTag("Tous");
+            setAnneeButtonText("Année");
+        }
+    };
 
     return (
         <section id="projects">
-            <div className="flex justify-center mb-4">
+            <div className="flex flex-wrap mb-4 gap-2">
                 <motion.button
                     className={`${
                         selectedTag === "Ecole"
-                            ? "text-white border-primary-500"
-                            : "text-[#ADB7BE] border-slate-600 hover:border-white"
-                    } rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
-                    onClick={() => handleTagChange("Ecole")}
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.95}}
+                            ? "border-primary-500 text-white"
+                            : selectedTag === "Entreprise"
+                                ? "border-primary-500 text-white"
+                                : "border-slate-600 text-[#ADB7BE]"
+                    } rounded-full border-2 px-4 py-2 text-xl cursor-pointer w-full sm:w-auto sm:min-w-[200px]`}
+                    onClick={handleSchoolEntChange}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                 >
-                    Ecole
+                    {schoolEntButtonText}
                 </motion.button>
+
                 <motion.button
                     className={`${
-                        selectedTag === "Entreprise"
-                            ? "text-white border-primary-500"
-                            : "text-[#ADB7BE] border-slate-600 hover:border-white"
-                    } rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
-                    onClick={() => handleTagChange("Entreprise")}
-                    whileHover={{scale: 1.05}}
-                    whileTap={{scale: 0.95}}
+                        selectedTag.startsWith("Année") && selectedTag !== "Tous"
+                            ? "border-primary-500 text-white"
+                            : "border-slate-600 text-[#ADB7BE]"
+                    } rounded-full border-2 px-4 py-2 text-xl cursor-pointer w-full sm:w-auto sm:min-w-[200px]`}
+                    onClick={handleAnneeChange}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                 >
-                    Entreprise
+                    {anneeButtonText}
                 </motion.button>
-            <motion.button
-                className={`${
-                    selectedTag === "Entreprise"
-                        ? "text-white border-primary-500"
-                        : "text-[#ADB7BE] border-slate-600 hover:border-white"
-                } rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
-                onClick={() => handleTagChange("Année1")}
-                whileHover={{scale: 1.05}}
-                whileTap={{scale: 0.95}}
-            >
-                Année
-            </motion.button>
             </div>
             <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {filteredProjects.map((project, index) => (
@@ -179,13 +197,9 @@ const ProjectsSection = () => {
                         >
                             <a>
                                 <ProjectCard
-                                    key={project.id}
                                     title={project.title}
                                     description={project.description}
                                     imgUrl={project.image}
-                                    gitUrl={project.gitUrl}
-                                    previewUrl={project.previewUrl}
-                                    id={project.id}
                                 />
                             </a>
                         </Link>

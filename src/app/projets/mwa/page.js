@@ -102,7 +102,7 @@ const MotorizedWideArea = () => {
                             .typeString('<span class="text-primary-500 text-3xl">Spécifications techniques :</span><br>')
                             .typeString('• Front-end : HTML/CSS/JS<br>')
                             .typeString('• Back-end : Django (Python)<br><br>')
-                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>07/11/2023 au 29/03/2024<br><br>')
+                            .typeString('<span class="text-primary-500 text-3xl">Dates :</span><br>07/11/2023 au 29/03/2024')
                             .start();
                     }}
                 />

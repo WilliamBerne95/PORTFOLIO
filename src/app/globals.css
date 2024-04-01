@@ -107,5 +107,87 @@ body, html {
     }
 }
 
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeOutLeft {
+    animation: fadeOutLeft 0.5s forwards;
+}
+
+.fadeInRight {
+    animation: fadeInRight 0.5s forwards;
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slideLeft {
+    animation: slideLeft 0.5s forwards;
+}
+
+.zoomedContent {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.project-image {
+    width: 100%;         /* or a fixed width */
+    height: auto;        /* maintain aspect ratio */
+    object-fit: contain; /* if you're using img tag */
+}
+.project-image-background {
+    background-size: cover; /* or contain, depending on the desired effect */
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
