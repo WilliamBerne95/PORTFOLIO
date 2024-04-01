@@ -1,19 +1,12 @@
 'use client'
-
 import React from "react";
-
 import Image from "next/image";
-
 
 export const ReaCard = (props) => {
     const [zoomedItem, setZoomedItem] = React.useState(null);
 
     React.useEffect(() => {
-        if (zoomedItem) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.body.style.overflow = zoomedItem ? 'hidden' : 'auto';
     }, [zoomedItem]);
 
     const [animation, setAnimation] = React.useState('zoomIn');
@@ -22,28 +15,59 @@ export const ReaCard = (props) => {
         setAnimation('zoomOut');
         setTimeout(() => {
             setZoomedItem(null);
+            setAnimation('zoomIn');
         }, 300);
     };
 
-    return(
+    const renderZoomedImage = (item) => {
+        // Checks if there is only one image path, if so, renders it.
+        if (item.path && !item.path1) {
+            return (
+                <Image
+                    src={item.path}
+                    alt={item.description}
+                    width={800}
+                    height={450}
+                    layout="responsive"
+                    onClick={closeZoom}
+                />
+            );
+        } else {
+            // If there are multiple images, map over them and render.
+            return [...Array(7)].map((_, i) => item[`path${i + 1}`] && (
+                <Image
+                    key={i}
+                    src={item[`path${i + 1}`]}
+                    alt={item.description}
+                    width={800}
+                    height={450}
+                    layout="responsive"
+                    onClick={closeZoom}
+                />
+            ));
+        }
+    };
+
+    return (
         <>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {props.images.map((item, index) => (
                     <div key={index}
-                         className="relative group cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer h-auto md:h-96 lg:h-80 transform hover:scale-105 transition-transform duration-300"
+                         className="relative group cellule bg-white rounded-lg shadow-lg overflow-hidden p-4 cursor-pointer transform hover:scale-105 transition-transform duration-300"
+                         style={{ height: '300px' }}
                          onClick={() => setZoomedItem(item)}>
                         <Image
                             src={item.path2 || item.path}
                             alt={item.description}
-                            width={500}
-                            height={300}
+                            width={800}
+                            height={450}
                             layout="responsive"
                             className="object-cover object-center w-full h-full"
                         />
                         <div className="absolute bottom-0 left-0 w-full z-10">
-                            <div className={`transition duration-[0.5s] opacity-0 group-hover:opacity-100 bg-gradient-to-t from-primary-500 to-transparent p-4 pt-14 w-full h-full`}></div>
+                            <div className={`transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100 bg-gradient-to-t from-primary-500 to-transparent p-4 pt-14 w-full h-full`}></div>
                             <h3 className="absolute bottom-0 left-0 p-4 text-lg font-bold text-white"
-                                style={{textShadow: '0 0 3px black'}}>{item.description}</h3>
+                                style={{textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)'}}>{item.description}</h3>
                         </div>
                     </div>
                 ))}
@@ -54,94 +78,13 @@ export const ReaCard = (props) => {
                      onClick={closeZoom}>
                     <div className="bg-white p-4 max-w-3xl max-h-full overflow-auto"
                          onClick={(e) => e.stopPropagation()}
-                         style={{animation: 'zoomIn 0.3s forwards'}}>
-                        {/* If there are two images, display them on top of each other */}
-                        {zoomedItem.path1 && (
-                            <Image
-                                src={zoomedItem.path1}
-                                alt="Firebase Backend Functioning"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path2 && (
-                            <Image
-                                src={zoomedItem.path2}
-                                alt="API Schema"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path3 && (
-                            <Image
-                                src={zoomedItem.path3}
-                                alt="API"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path4 && (
-                            <Image
-                                src={zoomedItem.path4}
-                                alt="API"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path5 && (
-                            <Image
-                                src={zoomedItem.path5}
-                                alt="API"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path6 && (
-                            <Image
-                                src={zoomedItem.path6}
-                                alt="API"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {zoomedItem.path7 && (
-                            <Image
-                                src={zoomedItem.path7}
-                                alt="API"
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
-                        {/* If there is only one image, display it */}
-                        {!zoomedItem.path1 && zoomedItem.path && (
-                            <Image
-                                src={zoomedItem.path}
-                                alt={zoomedItem.description}
-                                width={800}
-                                height={450}
-                                layout="responsive"
-                                onClick={closeZoom}
-                            />
-                        )}
+                         style={{animation: `${animation} 0.3s forwards`}}>
+                        {renderZoomedImage(zoomedItem)}
                         <h3 className="text-lg font-bold my-2" onClick={closeZoom}>{zoomedItem.description}</h3>
                         <p className="text-gray-700" onClick={closeZoom}>{zoomedItem.comment}</p>
                     </div>
                 </div>
             )}
         </>
-    )
-}
+    );
+};

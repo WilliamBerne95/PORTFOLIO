@@ -15,6 +15,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .menu {
+        display: none; /* Hide horizontal menu on mobile */
+        animation: slideDown 0.5s ease forwards;
+    }
+}@media (min-width: 769px) {
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -78,52 +90,34 @@ body {
 body, html {
     cursor: url('/public/images/Cursors/Default.cur'), default;
 }
-
-/* Curseur pour les éléments cliquables */
-a, button {
-    cursor: url('/public/images/Cursors/Link.cur'), pointer;
+.animated-gradient {
+    background-image: linear-gradient(90deg, #ffffff 0%, rgba(45, 73, 246, 0.85) 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
 }
 
-/* Curseur pour la saisie de texte */
-input, textarea {
-    cursor: url('/public/images/Cursors/Ibeam.cur'), text;
+@keyframes gradient-shift {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }
 
-/* Curseur de chargement */
-.loading {
-    cursor: url('/public/images/Cursors/Busy.ani'), wait;
+.menu-transition {
+    display: none; /* Le menu est caché par défaut */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
-/* Curseur de déplacement */
-.movable {
-    cursor: url('/public/images/Cursors/Move.cur'), move;
+.menu-transition.open {
+    display: block; /* Le menu s'affiche */
+    max-height: 500px; /* Mettre une valeur suffisamment grande pour accueillir tous vos liens */
 }
 
-/* Curseur de redimensionnement horizontal */
-.resize-h {
-    cursor: url('/public/images/Cursors/Horizontal.cur'), ew-resize;
-}
 
-/* Curseur de redimensionnement vertical */
-.resize-v {
-    cursor: url('/public/images/Cursors/Vertical.cur'), ns-resize;
-}
-
-/* Curseur de redimensionnement diagonal */
-.resize-diag1 {
-    cursor: url('/public/images/Cursors/Diagonal_1.cur'), nesw-resize;
-}
-
-.resize-diag2 {
-    cursor: url('/public/images/Cursors/Diagonal_2.cur'), nwse-resize;
-}
-
-/* Curseur pour les opérations d'écriture */
-.handwriting {
-    cursor: url('/public/images/Cursors/Handwriting.cur'), url('/public/images/Cursors/Handwriting.cur'), text;
-}
-
-/* Curseur pour aider */
-.help {
-    cursor: url('/public/images/Cursors/Help.cur'), help;
-}
