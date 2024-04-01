@@ -7,7 +7,7 @@ import {ReaCard} from "@/components/ReaCard";
 
 const images = [
     {
-        path: '/images/projects/ticketglpi/CycledeviedunTicketsurGLPI.PNG',
+        path: '/images/projects/ticketglpi/Cycledevie.png',
         description: 'Cycle de vie d\'un ticket sur GLPI',
         comment: "Cycle de vie d\'un ticket sur GLPI."
     },
