@@ -53,6 +53,8 @@ const HeroSection = () => {
                                     1000,
                                     "Étudiant à l'ESIEE-IT",
                                     1000,
+                                    "Technicien support",
+                                    1000,
                                 ]}
                                 wrapper="span"
                                 speed={50}
@@ -124,6 +126,24 @@ const HeroSection = () => {
                                 onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
                             >
                                 MOOC 1
+                            </button>
+                            <button
+                                className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
+                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                            >
+                                MOOC 2
+                            </button>
+                            <button
+                                className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
+                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                            >
+                                MOOC 3
+                            </button>
+                            <button
+                                className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
+                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                            >
+                                MOOC 4
                             </button>
                         </p>
                     </div>
