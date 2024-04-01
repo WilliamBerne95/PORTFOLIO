@@ -167,17 +167,17 @@ const VeilleHardware = () => {
                 className="text-white text-lg mb-8 definition"
                 variants={definitionVariants}
                 initial="hidden"
-                animate={definitionVisible ? "visible" : "hidden"}
+                animate="visible" // Changed this line
                 exit="exit"
                 transition={{duration: 1}}
             >
                 {`Le matériel informatique, aussi appelé "hardware", désigne l'ensemble
-                    des composants physiques d'un système informatique. Cela englobe les
-                    éléments tels que les processeurs, les cartes graphiques, la mémoire,
-                    les disques durs, les alimentations, etc. Le matériel constitue la
-                    base physique sur laquelle les logiciels s'exécutent. Ma veille
-                    consiste à surveiller les évolutions, les nouveautés et les
-                    informations importantes liées à ces composants.`}
+      des composants physiques d'un système informatique. Cela englobe les
+      éléments tels que les processeurs, les cartes graphiques, la mémoire,
+      les disques durs, les alimentations, etc. Le matériel constitue la
+      base physique sur laquelle les logiciels s'exécutent. Ma veille
+      consiste à surveiller les évolutions, les nouveautés et les
+      informations importantes liées à ces composants.`}
             </motion.p>
 
             <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
