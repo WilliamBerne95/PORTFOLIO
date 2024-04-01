@@ -46,8 +46,8 @@ const images = [
 
 
 const MotorizedWideArea = () => {
-    const [zoomedItem, setZoomedItem] = useState(null);
-    const [, setAnimation] = useState('zoomIn'); // Gérer l'animation
+    const [zoomedItem, ] = useState(null);
+    const [, ] = useState('zoomIn'); // Gérer l'animation
     const [, setCmdText] = useState('');
     const fullCmdText = `Développé par:\nKOPS-GUEDES Matheus, BERNE William, IMZILEN Abdelali\n\nDescription\nLe projet vise à développer une application JavaFX de location de voitures, facilitant la gestion de la flotte, des réservations et des clients à travers 10 agences.\n\nFonctionnalités\n- Création d'une collection de favoris pour les personnages d'anime.\n- Recherche de personnages à partir de noms ou de critères spécifiques d'anime ou manga.\n- Page d'accueil pour créer un compte utilisateur et gérer une collection de personnages.\n\nSpécifications techniques\n- Front-end : HTML/CSS/JS\n- Back-end : Django (Python)`;
 
