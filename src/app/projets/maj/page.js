@@ -57,7 +57,7 @@ const UpdatesAndImprovements = () => {
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">Mises
                     à Jour et Améliorations des Équipements</h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
-                    Suivi des mises à jour et des actions d'amélioration pour le matériel informatique.
+                    Suivi des mises à jour et des actions d{'\''}amélioration pour le matériel informatique.
                 </p>
             </div>
 

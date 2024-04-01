@@ -67,7 +67,7 @@ const GestionParcInformatique = () => {
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">Gestion
                     du Parc Informatique</h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-secondary-300">
-                    Suivi et gestion des équipements informatiques de l'entreprise.
+                    Suivi et gestion des équipements informatiques de l{'\''}entreprise.
                 </p>
             </div>
 
