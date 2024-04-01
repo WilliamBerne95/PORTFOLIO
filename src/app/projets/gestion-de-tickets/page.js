@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import {ReaCard} from "@/components/ReaCard";
@@ -45,7 +44,7 @@ const images = [
 
 const TicketManagement = () => {
     const [zoomedItem, setZoomedItem] = useState(null);
-    const [animation, setAnimation] = useState('zoomIn'); // Gérer l'animation
+    const [, setAnimation] = useState('zoomIn'); // Gérer l'animation
 
     const closeZoom = () => {
         setAnimation('zoomOut'); // Commencer par l'animation de sortie
