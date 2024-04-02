@@ -88,7 +88,7 @@ const Bilan = () => {
 
     return (
         <div className="bilan-container">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">Bilan des Compétences</h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">Bilan de mon BTS</h1>
             {Object.keys(skillsByYear).map((year) => (
                 <div key={year} className="year-section">
                     <h2 className="text-lg sm:text-xl md:text-2xl text-secondary-300">{year}</h2>
