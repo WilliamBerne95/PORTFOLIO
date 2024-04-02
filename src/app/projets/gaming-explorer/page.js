@@ -1,10 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 import {ReaCard} from "@/components/ReaCard";
-// Define your image data for Gaming Explorer project here
 const images = [
     {
         path: '/images/projects/gamingexplorer/github.png',
@@ -110,7 +108,7 @@ Pour les icônes, nous avons opté pour l'utilisation de React-icons, une biblio
 ];
 const GamingExplorerManagement = () => {
     const [zoomedItem, setZoomedItem] = useState(null);
-    const [animation, setAnimation] = useState('zoomIn'); // Gérer l'animation
+    const [, setAnimation] = useState('zoomIn'); // Gérer l'animation
 
     const closeZoom = () => {
         setAnimation('zoomOut'); // Commencer par l'animation de sortie
