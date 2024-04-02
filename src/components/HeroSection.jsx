@@ -121,26 +121,62 @@ const HeroSection = () => {
                         <h2>Certifications mooc</h2>
                         <p>
                             <button
+                                style={{
+                                    backgroundImage: "url('../images/MOOC/atelier-rgpd.png')",
+                                    backgroundSize: '100%',
+                                    color: 'transparent',
+                                    backgroundPosition: 'center',
+                                    width: '100px',
+                                    height: '100px',
+                                    borderRadius: '20px'
+                                }}
                                 className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
-                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                                onClick={() => openPdfInNewTab("../images/PDF/Certificat1_.pdf")}
                             >
-                                MOOC 1
+                                MOOC
                             </button>
                             <button
+                                style={{
+                                    backgroundImage: "url('../images/MOOC/protection-secret.png')",
+                                    backgroundSize: '100%',
+                                    color: 'transparent',
+                                    backgroundPosition: 'center',
+                                    width: '100px',
+                                    height: '100px',
+                                    borderRadius: '20px'
+                                }}
                                 className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
-                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                                onClick={() => openPdfInNewTab("../images/PDF/mooc-protection.pdf")}
                             >
                                 MOOC 2
                             </button>
                             <button
+                                style={{
+                                    backgroundImage: "url('../images/MOOC/inr.png')",
+                                    backgroundSize: '100%',
+                                    color: 'transparent',
+                                    backgroundPosition: 'center',
+                                    width: '100px',
+                                    height: '100px',
+                                    borderRadius: '20px'
+                                }}
                                 className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
-                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                                onClick={() => openPdfInNewTab("../images/PDF/Certificat1_.pdf")}
                             >
                                 MOOC 3
                             </button>
                             <button
+                                style={{
+                                    backgroundImage: "url('../images/MOOC/secnumanessi.png')",
+                                    backgroundSize: '100%',
+                                    color: 'transparent',
+                                    backgroundPosition: 'center',
+                                    width: '100px',
+                                    height: '100px',
+                                    borderRadius: '20px'
+                                }}
                                 className="bg-gradient-to-br from-primary-500 to-secondary-500 px-4 py-2 text-white rounded-full mt-4"
-                                onClick={() => openPdfInNewTab("/images/PDF/Certificat1_.pdf")}
+                                onClick={() => openPdfInNewTab("../images/PDF/Certificat1_.pdf")}
                             >
                                 MOOC 4
                             </button>
