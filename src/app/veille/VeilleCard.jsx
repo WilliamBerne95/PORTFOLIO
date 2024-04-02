@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
+const VeilleCard = ({ article, openPopup }) => {
     const [hovered, setHovered] = React.useState(false);
 
     const handleMouseEnter = () => {
@@ -13,17 +13,17 @@ const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative" onClick={() => openPopup()}>
             <div className="text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4">
-                <h5 className="text-xl font-semibold mb-2">{title}</h5>
+                <h5 className="text-xl font-semibold mb-2">{article.title}</h5>
                 <div
                     className="image-container mb-4 relative"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
                     <Image
-                        src={image}
-                        alt={title}
+                        src={article.image}
+                        alt={article.title}
                         width={1000}
                         height={1000}
                         className="image"
@@ -37,7 +37,7 @@ const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
                                         <span
                                             key={star}
                                             className="cursor-pointer text-xl"
-                                            style={{ color: star <= rating ? "#FFD700" : "#A0AEC0" }}
+                                            style={{ color: star <= article.rating ? "#FFD700" : "#A0AEC0" }}
                                         >
                                             ★
                                         </span>
@@ -49,12 +49,12 @@ const VeilleCard = ({ title, description, articleUrl, image, rating }) => {
                 </div>
                 <div className="flex justify-between items-center">
                     <a
-                        href={articleUrl}
+                        href={article.articleUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary-500 hover:text-primary-400"
                     >
-                        {`Lire l'article`}
+                        Lire l'article
                     </a>
                 </div>
             </div>

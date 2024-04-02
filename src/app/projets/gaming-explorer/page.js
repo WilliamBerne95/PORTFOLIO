@@ -168,6 +168,11 @@ const GamingExplorerManagement = () => {
                     <a className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">Retour aux projets</a>
                 </Link>
             </div>
+            <div className="text-center mt-12">
+                <a href="https://www.gamingexplorer.fr" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-700 transition-colors">
+                    Visitez Gaming Explorer
+                </a>
+            </div>
         </div>
     );
 };
