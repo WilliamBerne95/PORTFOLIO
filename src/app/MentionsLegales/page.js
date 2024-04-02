@@ -12,7 +12,7 @@ const Mentionslegales = () => {
             <p>
                 Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004
                 pour la Confiance dans l&apos;économie numérique, dite L.C.E.N., il est porté à la connaissance des
-                utilisateurs et visiteurs, ci-après l&apos;Utilisateur, du site https://www.eliawu.fr, ci-après le "Site", les
+                utilisateurs et visiteurs, ci-après l&apos;Utilisateur, du site https://www.eliawu.fr, ci-après le &quotSite&quot, les
                 présentes mentions légales.
             </p>
             <p>
@@ -28,7 +28,7 @@ const Mentionslegales = () => {
             <p>
                 L&apos;édition et la direction de la publication du Site est assurée par William Berne, domicilié
                 10 rue des Tournelles, 78510 TRIEL-SUR-SEINE, dont le numéro de téléphone est 07 86 13 97 16, et l&apos;adresse
-                e-mail william.berne@outlook.com. Ci-après "l&apos;Éditeur".
+                e-mail william.berne@outlook.com. Ci-après &quotl&apos;Éditeur&quot.
             </p>
 
             {/* Hosting section */}
