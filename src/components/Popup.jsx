@@ -10,7 +10,7 @@ const Popup = ({ isOpen, closePopup, article }) => {
                 <h2>{article.title}</h2>
                 <p>{article.summary}</p> {/* Ajouté pour afficher le résumé */}
                 <p>Note: {article.rating} / 5</p>
-                <a href={article.articleUrl} target="_blank" rel="noopener noreferrer">Lire l'article</a>
+                <a href={article.articleUrl} target="_blank" rel="noopener noreferrer">Lire l{'\''}article</a>
                 <button onClick={closePopup}>Fermer</button>
             </div>
         </div>,

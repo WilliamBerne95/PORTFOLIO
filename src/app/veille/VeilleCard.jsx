@@ -54,7 +54,7 @@ const VeilleCard = ({ article, openPopup }) => {
                         rel="noopener noreferrer"
                         className="text-primary-500 hover:text-primary-400"
                     >
-                        Lire l'article
+                        Lire l{'\''}article
                     </a>
                 </div>
             </div>
