@@ -197,7 +197,7 @@ const VeilleHardware = () => {
       les disques durs, les alimentations, etc. Le matériel constitue la
       base physique sur laquelle les logiciels s'exécutent. Ma veille
       consiste à surveiller les évolutions, les nouveautés et les
-      informations importantes liées à ces composants.`}
+      informations importantes liées à ces composants. (Cette veille a été réalisée via Google Alerts)`}
             </motion.p>
 
             <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
