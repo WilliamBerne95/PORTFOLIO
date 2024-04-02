@@ -15,7 +15,7 @@ export const ReaCard = (props) => {
         if (zoomedItem) {
             timeoutId = setTimeout(() => {
                 switchToNextItem();
-            }, 10000); // Change after 10 seconds
+            }, 100000);// Change after 10 seconds
         }
 
         return () => clearTimeout(timeoutId); // Cleanup timeout
