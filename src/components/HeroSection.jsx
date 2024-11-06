@@ -18,8 +18,8 @@ const HeroSection = () => {
 
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/images/PDF/CVWilliamBerne2023.pdf';
-        link.download = 'CVWilliamBerne2023.pdf';
+        link.href = '/images/PDF/CVWilliamBerne2024.pdf';
+        link.download = 'CVWilliamBerne2024.pdf';
         link.click();
     };
 
