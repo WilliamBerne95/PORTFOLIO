@@ -68,10 +68,10 @@ function AboutSection() {
                         <span style={{ fontWeight: 'bold', textDecoration: 'underline' }}>William Berne ({age} ans)</span>
                         <br />
                         <h3>
-                            {`Depuis toujours passionné par l&apos;informatique, j&apos;ai constamment cherché à en apprendre davantage. 
-                            Mon intérêt prolongé dans ce domaine m&apos;a conduit à développer un faible pour le hardware. 
-                            À l&apos;âge de 14 ans, j&apos;ai assemblé mon premier ordinateur de manière autonome, 
-                            et dès mes 11 ans, j&apos;ai collaboré avec deux amis pour coder en Python un jeu de course 3D via Blender.`}
+                            {`Depuis toujours passionné par l'informatique, j'ai constamment cherché à en apprendre davantage.
+                                Mon intérêt prolongé dans ce domaine m'a conduit à développer un faible pour le hardware.
+                                À l'âge de 14 ans, j'ai assemblé mon premier ordinateur de manière autonome,
+                                et dès mes 11 ans, j'ai collaboré avec deux amis pour coder en Python un jeu de course 3D via Blender.`}
                         </h3>
                     </p>
                     <div className="flex flex-row justify-start mt-8">
