@@ -16,6 +16,8 @@ const TAB_DATA = [
                 <li>JavaScript</li>
                 <li>React</li>
                 <li>Django</li>
+                <li>MySQL</li>
+                <li>Linux</li>
             </ul>
         ),
     },
@@ -26,7 +28,10 @@ const TAB_DATA = [
             <ul className="list-disc pl-2">
                 <li>2018 - BAC STI2D option ITEC à Lycée Jules Verne, Cergy-le-Haut (95800)</li>
                 <li>2020 - BTS Aquaculture au Lycée agricole de Coulogne, Coulogne (62137)</li>
-                <li>{`2022 - BTS SIO option SLAM à l'ESIEE-IT, Pontoise (95300)`}</li>
+                <li>2022 - BTS SIO option SLAM à l'ESIEE-IT, Pontoise (95300)</li>
+                <li>{`2024 - Bachelor L3 spécialisé en développement à l'ESIEE-IT, Pontoise (95300)`}</li>
+
+
             </ul>
         ),
     },
